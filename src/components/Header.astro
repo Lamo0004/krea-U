@@ -1,5 +1,18 @@
 ---
+import Link from "./Link.astro"
 ---
 <div>
-Header - tilføj navigation mm.
+<nav id="desktopmenu" class="hidden lg:block">
+    <ul class="flex flex-row gap-4">
+        <li class=""> <Link href="#">Koncept</Link> </li>
+        <li class=""> <Link href="#">Vores værksteder</Link> </li>
+        <li class=""> <Link href="#">Hjemmekasser</Link> </li>
+        <li class=""> <img src="" alt="logo"></li>
+        <li class=""> <Link href="#">Priser</Link> </li>
+        <li class=""> <Link href="#">Praktisk</Link> </li>
+        <li class=""> <Link href="#">Gavekort</Link> </li>
+    </ul>
+
+
+</nav>
 </div>
