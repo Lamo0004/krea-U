@@ -3,7 +3,161 @@
 @plugin "daisyui";
 
 @theme {
-  /* Her tilføjes theme variable // tokens */
+  /* colors */
+  --color-primary-50: #fcfaf9;
+  --color-primary-100: #f9f7f3;
+  --color-primary-200: #f4efe8;
+  --color-primary-300: #eee6dc;
+  --color-primary-400: #e9ded1;
+  --color-primary-500: #e3d6c5;
+  --color-primary-600: #b6ab9e;
+  --color-primary-700: #888076;
+  --color-primary-800: #5b564f;
+  --color-primary-900: #2d2b27;
+  --color-primary-950: #161513;
+
+  --color-accent-50: #e5f1f1;
+  --color-accent-100: #cce4e4;
+  --color-accent-200: #99c8ca;
+  --color-accent-300: #4d9fa1;
+  --color-accent-400: #339195;
+  --color-accent-500: #00767a;
+  --color-accent-600: #005e62;
+  --color-accent-700: #004749;
+  --color-accent-800: #002f31;
+  --color-accent-900: #000101;
+  --color-accent-950: #000000;
+
+  --color-grey-scale-50: #ffffff;
+  --color-grey-scale-100: #e5e5e5;
+  --color-grey-scale-200: #cccccc;
+  --color-grey-scale-300: #b2b2b2;
+  --color-grey-scale-400: #999999;
+  --color-grey-scale-500: #7f8080;
+  --color-grey-scale-600: #666666;
+  --color-grey-scale-700: #4c4d4d;
+  --color-grey-scale-800: #323333;
+  --color-grey-scale-900: #191a1a;
+  --color-grey-scale-950: #000101;
+
+  --color-primary: #f4efe8;
+  --color-secondary: #e3d6c5;
+  --color-accent: #005e62;
+  --color-succes: #green;
+  --color-error: #red;
+  --color-warning: #yellow;
+
+  /* border width */
+  --border-0: 0px;
+  --border: 1px;
+  --border-2: 2px;
+  --border-4: 4px;
+  --border-8: 8px;
+
+  /* border radius */
+  --rounded-none: 0px;
+  --rounded-xs: 2px;
+  --rounded-s: 4px;
+  --rounded-md: 6px;
+  --rounded-lg: 8px;
+  --rounded-xl: 12px;
+
+  /* border size */
+  --border: 1px;
+
+  /* margin */
+  --margin-btm-desk: 80px;
+  --margin-btm-mobi: 40px;
+  --margin-grid-desk: 48px;
+  --margin-grid-mobi: 24px;
+  --margin-xs: 8px;
+  --margin-s: 16px;
+  --margin-m: 24px;
+  --margin-l: 32px;
+  --margin-xl: 48px;
+  --margin-2xl: 64px;
+  --margin-3xl: 80px;
+  --margin-4xl: 144px;
+
+  /* padding */
+  --padding-px: 1px;
+  --padding-0-5: 0px;
+  --padding-1: 4px;
+  --padding-1-5: 6px;
+  --padding-2: 8px;
+  --padding-2-5: 10px;
+  --padding-3: 12px;
+  --padding-3-5: 14px;
+  --padding-4: 16px;
+  --padding-5: 20px;
+  --padding-6: 24px;
+  --padding-7: 28px;
+  --padding-8: 32px;
+  --padding-9: 36px;
+  --padding-10: 40px;
+  --padding-11: 44px;
+  --padding-12: 48px;
+  --padding-14: 56px;
+  --padding-16: 64px;
+  --padding-20: 80px;
+  --padding-24: 96px;
+  --padding-28: 112px;
+  --padding-32: 128px;
+  --padding-36: 144px;
+  --padding-40: 160px;
+  --padding-44: 176px;
+  --padding-48: 192px;
+  --padding-52: 208px;
+  --padding-56: 224px;
+  --padding-60: 240px;
+  --padding-64: 256px;
+  --padding-72: 288px;
+  --padding-80: 320px;
+  --padding-96: 384px;
+
+  /* width */
+  --width-4xs: 212px;
+  --width-3xs: 260px;
+  --width-2xs: 308px;
+  --width-xs: 356px;
+  --width-s: 388px;
+  --width-m: 428px;
+  --width-lg: 476px;
+  --width-xl: 524px;
+  --width-2xl: 572px;
+  --width-3xl: 620px;
+  --width-4xl: 660px;
+
+  /* height */
+  --height-6xs: 40px;
+  --height-5xs: 60px;
+  --height-4xs: 100px;
+  --height-3xs: 120px;
+  --height-2xs: 140px;
+  --height-xs: 160px;
+  --height-s: 200px;
+  --height-m: 220px;
+  --height-lg: 240px;
+  --height-xl: 260px;
+  --height-2xl: 300px;
+  --height-3xl: 320px;
+  --height-4xl: 340px;
+  --height-5xl: 360px;
+  --height-6xl: 400px;
+
+  /* effects */
+  --depth: 1;
+  --noise: 0;
+
+  /* shadows */
+  /* [horizontal offset] [vertical offset] [blur-radius] [spread-radius] [color] */
+  --shadow-drop-25: 0 4px 4px rgba(0, 0, 0, 0.25);
+  --shadow-drop-50: 0 4px 4px rgba(0, 0, 0, 0.5);
+  --shadow-inner-25: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+  --shadow-inner-50: inset 0 4px 4px rgba(0, 0, 0, 0.5);
+
+  /* background blur + opacity */
+  --background-blur-55: blur(6px) opacity(0.55);
 }
 
 @layer base {
@@ -17,6 +171,17 @@
 }
 
 @layer components {
+  /* Fonts */
+  .font-montserrat {
+    font-family: "Montserrat", sans-serif;
+  }
+  .font-loos {
+    font-family: "loos-extrawide", sans-serif;
+  }
+  .font-lora {
+    font-family: "Lora", serif;
+  }
 }
+
 @layer utilities {
 }
