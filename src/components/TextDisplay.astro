@@ -1,12 +1,8 @@
 ---
 // Henter parametrene fra Astro.props
-const { htmldisplay="h1", size="medium", stylingclasses=""} = Astro.props; 
+const { htmldisplay="h1", stylingclasses=""} = Astro.props; 
 const Htmldisplay = htmldisplay;
- 
-//Tailwind classes - der gør sig gældende for de forskellige størrelser.
-const sizeClasses = {
-"display-web": "text-8xl font-bold",
-"display-mobile": "text-5xl font-bold",
-};
+
 ---
-<Htmldisplay class:list={[sizeClasses[size], "font-raleway", stylingclasses]}><slot /></Htmldisplay>
+<Htmldisplay class:list={["font-raleway text-display font-bold uppercase", stylingclasses]}><slot /></Htmldisplay>
+

@@ -6,6 +6,8 @@ import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 import TextBody from "../components/TextBody.astro";
 import FAQ from "../components/FAQ.astro";
+import TextHeading from "../components/TextHeading.astro";
+import TextDisplay from "../components/TextDisplay.astro";
 ---
 <MainLayout title="Titel">
 	<article>
@@ -15,10 +17,8 @@ import FAQ from "../components/FAQ.astro";
 		<Image src={thumbsup} alt=""></Image>
 		<p>hej</p>
 
-		<TextBody size="small-regular" stylingclasses="md:text-lg mb-xs md:mb-s">
-			Lost Farm Festival is a three-day journey through art, music, and performance on the wild edge of Sjællands Odde.<br><br>
-			Artists are invited to experiment and create moments that can’t happen anywhere else. With the landscape, community, and artistic risk at the forefront.<br><br>
-			This is not Copenhagen or Aarhus—this is the cultural edge, Sjællands Odde.
-		  </TextBody>
+		<TextDisplay>
+			Lost Farm Festival.
+		  </TextDisplay>
 	</article>
 </MainLayout>
