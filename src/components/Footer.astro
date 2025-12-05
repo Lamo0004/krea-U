@@ -1,40 +1,35 @@
 ---
+import TextHeading from "./TextHeading.astro"
+import TextBody from "./TextBody.astro"
 ---
-<footer class="footer sm:footer-horizontal bg-base-300 text-base-content p-10">
+<footer class="footer sm:footer-horizontal bg-joker p-space-400">
 
-  <nav aria-label="Åbningstider">
-    <h6 class="footer-title">Åbningstider</h6>
-    <ul>
-      <li>Mandag: lukket</li>
-      <li>Tirsdag – fredag: 11.30 – 21.00</li>
-      <li>Lørdag – søndag: 10.00 – 17.00</li>
-    </ul>
-  </nav>
+  <div>
+      <TextHeading size="xs" stylingclasses="text-primary-50">Åbningstider</TextHeading>
+      <TextBody size="l" stylingclasses="text-primary-50">Mandag: lukket<br>Tirsdag – fredag: 11.30 – 21.00<br>Lørdag – søndag: 10.00 – 17.00 </TextBody>
+  </div>
 
-  <nav aria-label="Adresse og kontakt">
-    <h6 class="footer-title">Adresse</h6>
-    <p>
-      Søndergade 16<br>
-      7400 Herning
-    </p>
-    <p>Telefon: <a href="tel:+4553821274" class="link-hover">53 82 12 74</a></p>
-    <p>Email: <a href="mailto:info@krea-u.dk" class="link-hover">info@krea-u.dk</a></p>
-  </nav>
+  <div>
+    <TextHeading size="xs" stylingclasses="text-primary-50">Adresse</TextHeading>
+    <TextBody size="l" stylingclasses="text-primary-50">Søndergade 16<br>7400 Herning </TextBody>
+    <TextBody size="l" stylingclasses="text-primary-50">Telefon: <a href="tel:+4553821274">53 82 12 74</a></TextBody>
+    <TextBody size="l" stylingclasses="text-primary-50">Email: <a href="tel:+4553821274">info@krea-u.dk</a></TextBody>
+  </div>
 
   <div>
     <img src="" alt="Krea-U logo">
   </div>
   
-    <div class="grid grid-flow-col gap-4">
-      <a href="https://www.instagram.com/kreau.dk/" target="_blank" rel="noopener noreferrer">
-        <img src="instagram-icon.svg" alt="Instagram ikon">
-      </a>
-      <a href="https://www.facebook.com/malingpaakeramik?locale=da_DK" target="_blank" rel="noopener noreferrer">
-        <img src="facebook-icon.svg" alt="Facebook ikon">
-      </a>
-      <a href="https://dk.pinterest.com/kreau1274/" target="_blank" rel="noopener noreferrer">
-        <img src="pinterest-icon.svg" alt="Pinterest ikon">
-      </a>
-    </div>
+  <div class="flex gap-4 ">
+    <a href="https://www.instagram.com/kreau.dk/" target="_blank" rel="noopener noreferrer">
+      <img src="instagram-icon.svg" alt="Instagram ikon" class="w-8">
+    </a>
+    <a href="https://www.facebook.com/malingpaakeramik?locale=da_DK" target="_blank" rel="noopener noreferrer">
+      <img src="facebook-icon.svg" alt="Facebook ikon" class="w-8">
+    </a>
+    <a href="https://dk.pinterest.com/kreau1274/" target="_blank" rel="noopener noreferrer">
+      <img src="pinterest-icon.svg" alt="Pinterest ikon" class="w-8">
+    </a>
+  </div>
 
 </footer>

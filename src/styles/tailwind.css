@@ -43,6 +43,7 @@
   --color-primary: #f4efe8;
   --color-secondary: #e3d6c5;
   --color-accent: #005e62;
+  --color-joker: #867765;
   --color-succes: #green;
   --color-error: #red;
   --color-warning: #yellow;
@@ -62,29 +63,29 @@
   --text-body-s: 12px;
 
   /* spacing */
-  --space-010: 2px;
-  --space-025: 4px;
-  --space-050: 6px;
-  --space-075: 8px;
-  --space-100: 10px;
-  --space-150: 12px;
-  --space-200: 16px;
-  --space-250: 20px;
-  --space-300: 24px;
-  --space-400: 32px;
-  --space-500: 40px;
-  --space-600: 48px;
-  --space-800: 64px;
-  --space-1000: 80px;
-  --space-1200: 96px;
-  --space-1400: 112px;
-  --space-1600: 128px;
-  --space-1800: 144px;
-  --space-2000: 160px;
-  --space-2400: 192px;
-  --space-2800: 224px;
-  --space-3000: 240px;
-  --space-3200: 256px;
+  --padding-space-025: 4px;
+  --padding-space-010: 2px;
+  --padding-space-050: 6px;
+  --padding-space-075: 8px;
+  --padding-space-100: 10px;
+  --padding-space-150: 12px;
+  --padding-space-200: 16px;
+  --padding-space-250: 20px;
+  --padding-space-300: 24px;
+  --padding-space-400: 32px;
+  --padding-space-500: 40px;
+  --padding-space-600: 48px;
+  --padding-space-800: 64px;
+  --padding-space-1000: 80px;
+  --padding-space-1200: 96px;
+  --padding-space-1400: 112px;
+  --padding-space-1600: 128px;
+  --padding-space-1800: 144px;
+  --padding-space-2000: 160px;
+  --padding-space-2400: 192px;
+  --padding-space-2800: 224px;
+  --padding-space-3000: 240px;
+  --padding-space-3200: 256px;
 
   /* shadows */
   /* [horizontal offset] [vertical offset] [blur-radius] [spread-radius] [color] */
