@@ -4,27 +4,29 @@ import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
-import TextBody from "../components/TextBody.astro";
 import FAQ from "../components/FAQ.astro";
 import TextHeading from "../components/TextHeading.astro";
+import TextBody from "../components/TextBody.astro";
 import TextDisplay from "../components/TextDisplay.astro";
+import Studios_section from "../components/Studios_section.astro";
+import PictureLeft_Btn from "../components/PictureLeft_Btn.astro";
 ---
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<a href="https://www.kea.dk"><Button>Label</Button></a>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-		<p>hej</p>
+	<section class="pb-space-1800">
+		<div class="relative">
+			<video autoplay muted loop playsinline class="w-full object-cover object-center brightness-50 max-h-230"><source src="/hero.video.mp4" type="video/mp4" /></video>
 
-		<TextDisplay>
-			Lost Farm Festival.
-		  </TextDisplay>
-		  <TextHeading sizeClasses="m">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis obcaecati eligendi consectetur ex fuga eaque dolorum, quaerat sed, asperiores pariatur dolore praesentium cupiditate quae error aliquam. Vitae doloribus ipsam libero!
-		  </TextHeading>
-		  <TextBody sizeClasses="s"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem odio error sint minima porro facilis sed eveniet vitae pariatur delectus ullam, quo soluta iusto dolorem ipsam enim molestias quas necessitatibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus itaque eligendi quidem error vel laboriosam aliquam cupiditate obcaecati, quia nulla doloremque veritatis id iure consequuntur voluptas suscipit sequi dicta repudiandae.
-			
-		  </TextBody>
-	</article>
+			<div class="absolute inset-0 flex flex-col items-center justify-center z-10 text-center px-space-600 md:px-space-1400 lg:px-space-2000">
+				<TextDisplay>Det kreative værksted</TextDisplay>
+				<TextBody size="xl-regular" stylingclasses="text-primary-50 px-space-600 md:px-space-1400 lg:px-space-3000">Træd ind i KREA-U’s hyggelige værksted, hvor du kan slippe kreativiteten løs, fordybe dig og nyde et roligt pusterum midt i hverdagen.</TextBody>
+			</div>
+		</div>
+	</section>
+<Studios_section></Studios_section>
+
+<PictureLeft_Btn
+    image="/forside.webp"
+    alt="pige der maler"
+    heading="Velkommen til dig"
+    textbody="Hos KREA-U træder du ind i et kreativt værksted, hvor hverdagen kan lægges på pause. Her kan du fordybe dig i farver, former og nærvær – om du maler på keramik, designer smykker eller udforsker andre af vores kreative muligheder. Hos os er der plads til både rolig fordybelse og hyggelige stunder – alle er velkomne, uanset erfaring. Vi hjælper gerne med idéer, farver og teknikker, så du trygt kan gå i gang og lade kreativiteten udfolde sig i dit eget tempo. Vi håber, du vil nyde vores rolige og kreative værksted – et frirum midt i Herning skabt til dig. Vi glæder os til at se dig."/> 
 </MainLayout>

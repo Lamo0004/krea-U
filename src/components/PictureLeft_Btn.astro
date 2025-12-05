@@ -1,0 +1,21 @@
+---
+import Button from "./Button.astro";
+import TextBody from "./TextBody.astro";
+import TextHeading from "./TextHeading.astro";
+const { image, alt, heading, textbody } = Astro.props;
+---
+
+<section>
+    <div class="grid grid-cols-2 place-items-center gap-8">
+        
+        <div>
+            <img src={image} alt={alt} class="w-150 h-150 object-cover"/>
+        </div>
+
+        <div class="">
+            <TextHeading size="display-mobile">{heading}</TextHeading>
+            <TextBody size="small-regular">{textbody}</TextBody>
+        </div>
+
+    </div>
+</section>
