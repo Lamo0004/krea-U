@@ -3,74 +3,73 @@ import Button from "./Button.astro";
 import TextHeading from "./TextHeading.astro";
 import TextBody from "./TextBody.astro";
 ---
-  <div class="grid lg:grid-rows-2">
-    <div>
-        <form name="bestil">
-		<TextHeading size="m" stylingclasses="pb-space-050">Bestil her</TextHeading>
-		<TextBody size="large" stylingclasses="pb-space-300">Udfyld formularen med hvilken kasse du ønsker, og hvor mange du vil bestille. Vi pakker det klar til dig og giver besked, når din kasse er klar til afhentning. <br>Du er selvfølgelig også altid velkommen til at købe dine Hjemme-Krea-kasser direkte i butikken.</TextBody>
+<div class="grid mg:grid-rows-2 pb-space-1800 md:mx-spacing-3000">
 
-        <!-- Full name field -->
-        <div class="grid grid-rows-2 lg:mt-8">
-          <label for="full-name">Fulde navn</label>
-          <input
-            class="border-1 border-accent-600 p-space-050"
-            placeholder="fx. Peter Jensen"
-            id="full-name"
-            name="fname"
-            type="text"
-            required
-          />
+    <form name="bestil">
+		<TextHeading size="m" stylingclasses="pb-space-050">Bestil her</TextHeading>
+		<TextBody size="large" stylingclasses="pb-space-300">Udfyld formularen med hvilken kasse du ønsker, og hvor mange du vil bestille. Vi pakker det klar til dig og giver besked, når din kasse er klar til afhentning.<br>Du er selvfølgelig også altid velkommen til at købe dine Hjemme-Krea-kasser direkte i butikken.</TextBody>
+
+        <!-- Fuld navn felt -->
+        <div class="grid mb-6">
+            <label for="full-name" class="pb-space-050">Dit fulde navn</label>
+                <input
+                    class="border-1 border-accent-600 p-space-050"
+                    placeholder="Peter Jensen"
+                    id="full-name"
+                    name="fname"
+                    type="text"
+                    required
+                />
         </div>
-        <!-- Email field -->
-        <div class="grid grid-rows-2 mt-4">
-          <label for="email">E-mail</label>
-          <input
-            class="border-1 border-accent-600 lg:mr-100"
-            placeholder="fx. peter@mail.dk"
-            id="email"
-            name="email"
-            type="email"
-            required
-          />
+
+        <!-- Email felt -->
+        <div class="grid mb-6">
+            <label for="email" class="pb-space-050">E-mail</label>
+                <input
+                    class="border-1 border-accent-600 p-space-050"
+                    placeholder="peter@mail.dk"
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                />
         </div>
-        <!-- Number of people field -->
-        <div class="grid grid-rows-2 mt-4">
-          <label for="antal">Antal GB fjernet</label>
-          <input
-            class="border-1 border-accent-600 lg:mr-100"
-            id="antal"
-            name="antal"
-            type="number"
-            placeholder="10GB"
-            required
-          />
+
+        <!-- Telefonnummer felt -->
+        <div class="grid mb-6">
+            <label for="telephone" class="pb-space-050">Telefonnummer</label>
+                <input
+                    class="border-1 border-accent-600 p-space-050"
+                    id="telephone"
+                    name="telephone"
+                    type="tel"
+                    placeholder="12 34 56 78"
+                    required
+            />
         </div>
+
+        <!-- Bestillingsønsker felt -->
+        <div class="grid mb-6">
+            <label for="bestilling" class="pb-space-050">Bestillingsønsker</label>
+                <textarea
+                    id="bestilling"
+                    name="bestilling"
+                    placeholder="Skriv dine ønsker til din Hjemme-Krea-Kasse her"
+                    class="border-1 border-accent-600 p-space-050 resize-none h-32"
+                    required
+                ></textarea>
+        </div>
+
         <div class="mt-6">
-          <p class="font-bold">Yderligere tilvalg</p>
-          <div class="flex flex-col gap-2 mt-2">
-            <label class="flex items-center gap-2">
-              <input
-                type="radio"
-                name="data-type"
-                value="billeder"
-                class="accent-lime-600"
-                required
-              />
-              Jeg stoler på at i behandler mine data indefor GDPR Logivning
-            </label>
-            <label class="flex items-center gap-2">
-              <input
-                type="radio"
-                name="data-type"
-                value="videoer"
-                class="accent-lime-600"
-                required
-              />
-              Meld mig til nyhedsbrevet
-            </label>
-          </div>
+            <p class="font-bold">Yderligere tilvalg</p>
+            <div class="flex flex-col gap-2 mt-2">
+                <label class="flex items-center gap-2">
+                <input type="checkbox" checked="checked" class="checkbox"/>Jeg stoler på at i behandler mine data indefor GDPR Logivning
+                </label>
+            </div>
         </div>
-        <!-- Submit button -->
+
+        <!-- Bekræft knap -->
         <Button />
-      </form>
-</MainLayout>
+    </form>
+

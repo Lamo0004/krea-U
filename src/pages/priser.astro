@@ -1,0 +1,50 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import HeroNiveau2 from "../components/HeroNiveau2.astro";
+---
+<MainLayout title="Koncept">
+    <HeroNiveau2
+        image="priser_hero.webp" 
+        alt="hylder med keramik og maling" 
+        display="Vores priser" 
+        textbody="Hos KREA-U betales der ikke for et bord, men kun for det, du laver. Herunder finder du et overblik over priser på keramik, smykker og events, så du kan planlægge dit besøg hos os."/>
+
+
+<div class="tabs tabs-lift">
+
+  <!-- KERAMIK -->
+  <label class="tab px-10 py-20 flex flex-col items-center justify-center gap-4">
+    <input type="radio" name="my_tabs_4" />
+    <img src="/keramik.svg" alt="" class="w-[100px] h-[100px]" />
+    <span>Keramik</span>
+  </label>
+  <div class="tab-content bg-base-100 border-base-300 p-6">
+    Tab content 1
+  </div>
+
+  <!-- SMYKKE -->
+  <label class="tab px-10 py-20 flex flex-col items-center justify-center gap-4">
+    <input type="radio" name="my_tabs_4" checked />
+    <img src="/smykke.svg" alt="" class="w-[100px] h-[100px]" />
+    <span>Smykke</span>
+  </label>
+  <div class="tab-content bg-base-100 border-base-300 p-6">
+    Tab content 2
+  </div>
+
+  <!-- EVENT -->
+  <label class="tab px-10 py-20 flex flex-col items-center justify-center gap-4">
+    <input type="radio" name="my_tabs_4" />
+    <img src="/event.svg" alt="" class="w-[100px] h-[100px]" />
+    <span>Event</span>
+  </label>
+  <div class="tab-content bg-base-100 border-base-300 p-6">
+    Tab content 3
+  </div>
+
+</div>
+
+
+
+</MainLayout>
