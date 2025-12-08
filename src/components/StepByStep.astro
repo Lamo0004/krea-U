@@ -1,0 +1,30 @@
+---
+import TextBody from "./TextBody.astro";
+import TextHeading from "./TextHeading.astro";
+const {heading1, first_step, second_step, third_step, fourth_step, textbody1, textbody2, textbody3, textbody4} = Astro.props;
+---
+
+<section>
+    <TextHeading size="xl">{heading1}</TextHeading>
+    
+    <div class="grid grid-cols-4 place-items-center gap-8">
+        <div>
+            <img src="et.svg" alt="et tal icon" class="w-13 h-13"/>
+            <TextHeading size="m">{first_step}</TextHeading>
+            <TextBody size="small-regular">{textbody1}</TextBody>
+        </div>
+        <div>
+            <img src="to.svg" alt="to tal icon" class="w-13 h-13"/>
+            <TextHeading size="m">{second_step}</TextHeading>
+            <TextBody size="small-regular">{textbody2}</TextBody>
+        </div>        <div>
+            <img src="tre.svg" alt="tre tal icon" class="w-13 h-13"/>
+            <TextHeading size="m">{third_step}</TextHeading>
+            <TextBody size="small-regular">{textbody3}</TextBody>
+        </div>        <div>
+            <img src="fire.svg" alt="fire tal icon" class="w-13 h-13"/>
+            <TextHeading size="m">{fourth_step}</TextHeading>
+            <TextBody size="small-regular">{textbody4}</TextBody>
+        </div>
+    </div>
+</section>
