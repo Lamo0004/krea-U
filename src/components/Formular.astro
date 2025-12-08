@@ -1,0 +1,76 @@
+---
+import Button from "./Button.astro";
+import TextHeading from "./TextHeading.astro";
+import TextBody from "./TextBody.astro";
+---
+  <div class="grid lg:grid-rows-2">
+    <div>
+        <form name="bestil">
+		<TextHeading size="m" stylingclasses="pb-space-050">Bestil her</TextHeading>
+		<TextBody size="large" stylingclasses="pb-space-300">Udfyld formularen med hvilken kasse du ønsker, og hvor mange du vil bestille. Vi pakker det klar til dig og giver besked, når din kasse er klar til afhentning. <br>Du er selvfølgelig også altid velkommen til at købe dine Hjemme-Krea-kasser direkte i butikken.</TextBody>
+
+        <!-- Full name field -->
+        <div class="grid grid-rows-2 lg:mt-8">
+          <label for="full-name">Fulde navn</label>
+          <input
+            class="border-1 border-accent-600 p-space-050"
+            placeholder="fx. Peter Jensen"
+            id="full-name"
+            name="fname"
+            type="text"
+            required
+          />
+        </div>
+        <!-- Email field -->
+        <div class="grid grid-rows-2 mt-4">
+          <label for="email">E-mail</label>
+          <input
+            class="border-1 border-accent-600 lg:mr-100"
+            placeholder="fx. peter@mail.dk"
+            id="email"
+            name="email"
+            type="email"
+            required
+          />
+        </div>
+        <!-- Number of people field -->
+        <div class="grid grid-rows-2 mt-4">
+          <label for="antal">Antal GB fjernet</label>
+          <input
+            class="border-1 border-accent-600 lg:mr-100"
+            id="antal"
+            name="antal"
+            type="number"
+            placeholder="10GB"
+            required
+          />
+        </div>
+        <div class="mt-6">
+          <p class="font-bold">Yderligere tilvalg</p>
+          <div class="flex flex-col gap-2 mt-2">
+            <label class="flex items-center gap-2">
+              <input
+                type="radio"
+                name="data-type"
+                value="billeder"
+                class="accent-lime-600"
+                required
+              />
+              Jeg stoler på at i behandler mine data indefor GDPR Logivning
+            </label>
+            <label class="flex items-center gap-2">
+              <input
+                type="radio"
+                name="data-type"
+                value="videoer"
+                class="accent-lime-600"
+                required
+              />
+              Meld mig til nyhedsbrevet
+            </label>
+          </div>
+        </div>
+        <!-- Submit button -->
+        <Button />
+      </form>
+</MainLayout>

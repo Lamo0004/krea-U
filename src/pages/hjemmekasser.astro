@@ -1,0 +1,59 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import HeroNiveau2 from "../components/HeroNiveau2.astro";
+import PictureRight_Btn from "../components/PictureRight_Btn.astro";
+import StepByStep from "../components/StepByStep.astro";
+import Button from "../components/Button.astro";
+import TextHeading from "../components/TextHeading.astro";
+import TextBody from "../components/TextBody.astro";
+import Formular from "../components/Formular.astro"
+
+---
+<MainLayout title="Koncept">
+    <HeroNiveau2
+        image="hjemmekrea_hero.webp" 
+        alt="sættekasse med krus i hullerne" 
+        display="Hjemme-krea" 
+        textbody="Tag KREA-U med hjem. Skab ro og hygge med en Hjemme-Krea kasse  - Alt, du behøver for at male keramik derhjemme."/>
+
+    <PictureRight_Btn
+        heading="Hjertet bag"
+		textbody1="KREA-U er startet af Birgitte, med en passion for mental sundhed og kreativt nærvær. Hun ønskede at skabe et roligt værksted, hvor man kan lægge hverdagen fra sig, slippe skærmene og finde fordybelse i nuet gennem kreativitet. Her er alle velkomne – både nybegyndere og erfarne. Du kan sætte dig og male på keramik, lave dine egne smykker og nyde en kreativ pause, der giver ny energi."
+		textbody2= "Vi tilbyder samtidig både vores egne events og dit helt eget skræddersyet event, så uanset om det er fødselsdag, firmaarrangement eller en hyggelig stund med venner og familie, skaber vi rammerne for en personlig og kreativ oplevelse."
+		textbody3= "Bag værkstedet står et varmt og engageret personale, som altid er klar til at hjælpe dig godt i gang. Vi guider dig gerne med idéer, farver og teknikker. Vi brænder for at skabe et rum, hvor du kan føle dig tryg, inspireret og kreativ."
+        image="/birgitte.webp"
+		alt="pige der maler"
+    />
+
+	<StepByStep
+		heading1="Sådan gør du"
+		first_step="Vælg"
+		textbody1="Se beskrivelserne af vores tre Hjemme-Krea kasser og bestil den, du ønsker. Du får alt du skal det bruge med hjem."
+		second_step="Mal"
+		textbody2="Lad kreativiteten begynde derhjemme, og mal i dit keramik. Du kan finde masser af inspiration på vores sociale medier."
+		third_step="Aflever"
+		textbody3="Når malingen er tør, pakker du keramikken forsigtigt ind og afleverer det hos os.  Husk at skrive initialer og dato i bunden."
+		fourth_step="Afhent"
+		textbody4="Vi glaserer og brænder dit keramik. Når det er klar, får du besked, og du kan hente det hos os. Ca. 14 dage."/>
+
+    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-28 max-w-[1200px] mx-auto md:px-4 pb-space-1800">
+        <div>
+            <img class="w-70 h-70 md:w-85 md:h-85 object-center pb-space-600 object-cover" src="/kasse1.webp" alt="kande"/>
+            <TextHeading size="m" stylingclasses="pb-space-050">Keramikværksted</TextHeading>
+            <TextBody stylingclasses="pb-space-050">Mal dit eget keramik i kreative omgivelser. Vælg mellem kopper, skåle, figurer og meget mere.</TextBody>
+        </div>
+        <div>
+            <img class="w-70 h-70 md:w-85 md:h-85 object-center pb-space-600 object-cover" src="/kasse2.webp" alt="kande"/>
+            <TextHeading size="m" stylingclasses="pb-space-050">Smykkeværksted</TextHeading>
+            <TextBody stylingclasses="pb-space-050">Design dine egne unikke smykker med perler, vedhæng og farver i vores inspirerende værksted.</TextBody>
+        </div>
+        <div>
+            <img class="w-70 h-70 md:w-85 md:h-85 object-center pb-space-600 object-cover" src="/kasse3.webp" alt="kande"/>
+            <TextHeading size="m" stylingclasses="pb-space-050">Events</TextHeading>
+            <TextBody stylingclasses="pb-space-050">Deltag i vores hyggelige events eller book dit helt eget skræddersyede event hos os.</TextBody>
+        </div>
+    </section>
+
+<Formular></Formular>
+
+</MainLayout>
