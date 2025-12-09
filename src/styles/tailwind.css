@@ -110,7 +110,6 @@
     border-color: var(--color-gray-200, currentColor);
   }
 }
-
 @layer components {
   /* Fonts */
   .font-montserrat {
@@ -118,6 +117,35 @@
   }
   .font-raleway {
     font-family: "Raleway", sans-serif;
+  }
+
+  .tabs-lift {
+    --tab-bg: theme("colors.primary.500") !important;
+  }
+
+  /* Tap componentet css dertil */
+  /* Fjern lift-effekt og hullet under tabs */
+  .tabs-lift > .tab {
+    top: 0 !important;
+  }
+  .tabs-lift > .tab::before {
+    height: 0 !important;
+  }
+
+  /* Fjern border fra tab */
+  .tabs-lift > .tab {
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Aktiv tab farve */
+  .tabs-lift > label.tab:has(input:checked) {
+    background-color: theme("colors.primary.500") !important;
+  }
+
+  /* Stram content sammen med tabs */
+  .tab-content {
+    border-top-width: 0 !important;
   }
 }
 
