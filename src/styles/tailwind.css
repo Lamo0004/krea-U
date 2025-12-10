@@ -2,6 +2,10 @@
 
 @plugin "daisyui";
 
+:root {
+  --content-width: 1200px; /* Maks bredde på centreret content */
+}
+
 @theme {
   /* colors */
   --color-primary-50: #fcfaf9;
@@ -108,6 +112,14 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+  }
+
+  main {
+    max-width: var(--content-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--padding-space-250); /* padding på små skærme */
+    padding-right: var(--padding-space-250); /* padding på små skærme */
   }
 }
 @layer components {
