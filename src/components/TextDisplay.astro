@@ -1,8 +1,20 @@
 ---
 // Henter parametrene fra Astro.props
-const { htmldisplay="h1", stylingclasses=""} = Astro.props; 
+const { htmldisplay="h1", color="", stylingclasses=""} = Astro.props; 
 const Htmldisplay = htmldisplay;
 
+//Definer den styling, der gør sig gældende for de forskellige varianter (farve).
+const colorClasses = {
+"white": "text-primary-50",
+"black": "text-grey-scale-950",
+}
+
+const headingClasses = `
+  font-raleway text-display font-bold uppercase
+  ${colorClasses[color] || colorClasses["white"]}
+  ${stylingclasses}
+`;
+
 ---
-<Htmldisplay class:list={["font-raleway text-display text-primary-50 font-bold uppercase", stylingclasses]}><slot /></Htmldisplay>
+<Htmldisplay class={headingClasses}><slot /></Htmldisplay>
 
