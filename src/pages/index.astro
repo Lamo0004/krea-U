@@ -8,9 +8,10 @@ import Studios_section from "../components/Studios_section.astro";
 import PictureLeft_Btn from "../components/PictureLeft_Btn.astro";
 import StepByStep from "../components/StepByStep.astro";
 import Link from "../components/Link.astro";
+import FullBleedSection from "../components/FullBleedSection.astro";
 ---
 <MainLayout title="Forside">
-	<section class="pb-space-1800 -mx-10 md:-mx-60">
+	<FullBleedSection class="pb-space-1800">
 		<div class="relative">
 			<video autoplay muted loop playsinline class="w-full object-cover object-center brightness-50 h-220 md:max-h-230"><source src="/hero.video.mp4" type="video/mp4" /></video>
 
@@ -20,16 +21,18 @@ import Link from "../components/Link.astro";
 				<button>Hej lau knap</button>
 			</div>
 		</div>
-	</section>
+	</FullBleedSection>
 
 	<Studios_section></Studios_section>
 
+	<FullBleedSection>
 	<PictureLeft_Btn
 		image="/forside.webp"
 		alt="pige der maler"
 		heading="Velkommen til dig"
 		textbody1="Hos KREA-U træder du ind i et kreativt værksted, hvor hverdagen kan lægges på pause. Her kan du fordybe dig i farver, former og nærvær – om du maler på keramik, designer smykker eller udforsker andre af vores kreative muligheder."
 		textbody2= "Hos os er der plads til både rolig fordybelse og hyggelige stunder – alle er velkomne, uanset erfaring. Vi hjælper gerne med idéer, farver og teknikker, så du trygt kan gå i gang og lade kreativiteten udfolde sig i dit eget tempo. Vi håber, du vil nyde vores rolige og kreative værksted – et frirum midt i Herning skabt til dig. Vi glæder os til at se dig."/>
+	</FullBleedSection>
 
 	<StepByStep
 		heading1="Sådan gør du"

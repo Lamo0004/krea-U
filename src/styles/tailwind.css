@@ -2,10 +2,6 @@
 
 @plugin "daisyui";
 
-:root {
-  --content-width: 1200px; /* Maks bredde på centreret content */
-}
-
 @theme {
   /* colors */
   --color-primary-50: #fcfaf9;
@@ -114,15 +110,18 @@
     border-color: var(--color-gray-200, currentColor);
   }
 
+  /* Main grid med 3 kolonner */
   main {
-    max-width: var(--content-width);
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: var(--padding-space-250); /* padding på små skærme */
-    padding-right: var(--padding-space-250); /* padding på små skærme */
+    @apply grid grid-cols-[1fr_minmax(0,1200px)_1fr];
   }
 }
+
 @layer components {
+  /* Main grid: alle børn af <main> placeres i midterste kolonne. */
+  main > * {
+    @apply col-start-2 col-end-3;
+  }
+
   /* Fonts */
   .font-montserrat {
     font-family: "Montserrat", sans-serif;
