@@ -1,23 +1,23 @@
 ---
 import Button from "./Button.astro";
-import Link from "./Link.astro";
+import NavigationLink from "./NavigationLink.astro";
 ---
 
 <header class="w-screen flex justify-between lg:justify-center items-center bg-primary-200 fixed z-50 p-6">
 
   <!-- Desktop menu -->
   <nav class="hidden lg:flex flex-1 gap-8 justify-center items-end uppercase">
-    <Link href="/koncept">Koncept</Link>
+    <NavigationLink href="/koncept">Koncept</NavigationLink>
     
     <div class="group relative">
-  <Link size="l" href="/vores_verksteder" class="cursor-pointer flex items-center">
+  <NavigationLink size="l" href="/vores_verksteder" class="cursor-pointer flex items-center">
     <div class="flex items-center">
     Vores værksteder
     <svg class="ml-1 w-3 h-3 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
     </svg>
     </div>
-</Link>
+</NavigationLink>
 
  <div class="fixed left-0 right-0 top-[120px] bg-primary-300 invisible group-hover:visible transition-all duration-200 z-40 py-space-400">
     <div class="flex flex-col">
@@ -28,11 +28,11 @@ import Link from "./Link.astro";
   </div>
 </div>
 
-    <Link size="l" href="/hjemmekasser">Hjemme-krea</Link>
+    <NavigationLink size="l" href="/hjemmekasser">Hjemme-krea</NavigationLink>
     <a href="/"><img src="/logo_sort.png" alt="Krea-U logo" class="h-18" /></a>
-    <Link size="l" href="/priser">Priser</Link>
-    <Link size="l" href="/praktisk">Praktisk</Link>
-    <Link size="l" href="/gavekort">Gavekort</Link>
+    <NavigationLink size="l" href="/priser">Priser</NavigationLink>
+    <NavigationLink size="l" href="/praktisk">Praktisk</NavigationLink>
+    <NavigationLink size="l" href="/gavekort">Gavekort</NavigationLink>
   </nav>
 
 <!-- Knap -->
