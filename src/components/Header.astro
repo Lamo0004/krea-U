@@ -9,7 +9,7 @@ import Link from "./Link.astro";
   <nav class="hidden lg:flex flex-1 gap-8 justify-center items-end uppercase">
     <Link href="/koncept">Koncept</Link>
     
-    <div class="relative group">
+    <div class="group relative">
   <Link size="l" href="/vores_verksteder" class="cursor-pointer flex items-center">
     <div class="flex items-center">
     Vores værksteder
@@ -19,11 +19,11 @@ import Link from "./Link.astro";
     </div>
 </Link>
 
-  <div class="absolute top-15 w-screen bg-primary-300 invisible group-hover:visible transition-all duration-200 z-50 py-space-400">
+ <div class="fixed left-0 right-0 top-[120px] bg-primary-300 invisible group-hover:visible transition-all duration-200 z-40 py-space-400">
     <div class="flex flex-col">
-    <a href="/" class="p-space-250 font-raleway text-body-m text-grey-scale-950 hover:font-bold">Keramikværkstedet</a>
-    <a href="/" class="p-space-250 font-raleway text-body-m text-grey-scale-950 hover:font-bold">Smykkeværkstedet</a>
-    <a href="/" class="p-space-250 font-raleway text-body-m text-grey-scale-950 hover:font-bold">Events</a>
+    <a href="/" class="py-space-250 px-space-3200 font-raleway text-body-m text-grey-scale-950 hover:font-bold">Keramikværkstedet</a>
+    <a href="/" class="py-space-250 px-space-3200 font-raleway text-body-m text-grey-scale-950 hover:font-bold">Smykkeværkstedet</a>
+    <a href="/" class="py-space-250 px-space-3200 font-raleway text-body-m text-grey-scale-950 hover:font-bold">Events</a>
     </div>
   </div>
 </div>
