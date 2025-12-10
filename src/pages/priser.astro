@@ -13,203 +13,427 @@ import TextBody from "../components/TextBody.astro";
         textbody="Hos KREA-U betales der ikke for et bord, men kun for det, du laver. Herunder finder du et overblik over priser på keramik, smykker og events, så du kan planlægge dit besøg hos os."/>
 
 
-<div class="tabs tabs-lift gap-x-25 justify-center pb-space-1800">
+    <div class="tabs tabs-lift gap-x-25 justify-center pb-space-1800">
 
-  <!-- KERAMIK -->
-  <label class="tab px-10 py-20 rounded-t-xl">
-    <input type="radio" name="my_tabs_4" checked/>
-    <div class="flex flex-col items-center gap-2 -mt-18">
-      <img src="/keramik.svg" alt="" class="w-[100px] h-[100px]" />
-      <span><TextHeading size="xs">Keramik</TextHeading></span>
+    <!-- KERAMIK -->
+        <label class="tab px-10 py-20 rounded-t-xl">
+        <input type="radio" name="my_tabs_4" checked/>
+            <div class="flex flex-col items-center gap-2 -mt-18">
+                <img src="/keramik.svg" alt="" class="w-[100px] h-[100px]" />
+                <span><TextHeading size="xs">Keramik</TextHeading></span>
+            </div>
+        </label>
+        <div class="tab-content bg-primary-500 rounded-xl">
+            <div class="p-space-600">
+                <div class="grid px-space-3200 pt-space-800">
+                    <TextHeading size="xl" stylingclasses="pb-space-050">Keramik</TextHeading>
+                    <TextBody size="m-regular" stylingclasses="pb-space-1200">Priserne på keramik varierer afhængigt af størrelse og type, men er altid inklusiv maling og brænding. Priserne her på siden er <strong>kun et udpluk af vores sortiment</strong> – vi har et endnu større udvalg i caféen, så der er noget for enhver stil og ethvert budget.</TextBody>    
+                </div>
+
+                <div class="grid grid-cols-4 gap-12">
+                    <div>
+                        <img src="/krus.webp" alt="krus af keramik" class="pb-space-100" onclick="my_modal_2.showModal()">
+                        <dialog id="my_modal_2" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/krus.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>
+                      <TextHeading size="xs" stylingclasses="pb-space-050">Store krus</TextHeading>    
+                      <TextBody size="l-regular">150 kr. - 225 kr.</TextBody>
+                    </div>
+                    <div>
+                      <img src="/smallkrus.webp" alt="små krus af keramik" class="pb-space-100" onclick="my_modal_3.showModal()">
+                        <dialog id="my_modal_3" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/smallkrus.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>                        
+                        <TextHeading size="xs" stylingclasses="pb-space-050">Små krus</TextHeading>    
+                        <TextBody size="l-regular">100 kr. - 175 kr.</TextBody>
+                    </div>
+                    <div>
+                        <img src="/bigplates.webp" alt="tallerkener af keramik" class="pb-space-100" onclick="my_modal_4.showModal()">
+                        <dialog id="my_modal_4" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/bigplates.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>
+                        <TextHeading size="xs" stylingclasses="pb-space-050">Store tallerkener</TextHeading>    
+                        <TextBody size="l-regular">305 kr. - 650 kr.</TextBody>
+                    </div>
+                    <div>
+                        <img src="/smallplates.webp" alt="små tallerkener af keramik" class="pb-space-100" onclick="my_modal_5.showModal()">
+                        <dialog id="my_modal_5" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/smallplates.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>
+                        <TextHeading size="xs" stylingclasses="pb-space-050">Små tallerkener</TextHeading>    
+                        <TextBody size="l-regular">100 kr. - 180 kr.</TextBody>
+                    </div>
+                    <div>
+                        <img src="/bigbowl.webp" alt="store skåle af keramik" class="pb-space-100" onclick="my_modal_6.showModal()">
+                        <dialog id="my_modal_6" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/bigbowl.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>
+                        <TextHeading size="xs" stylingclasses="pb-space-050">Store skåle</TextHeading>    
+                        <TextBody size="l-regular">350 kr. - 450 kr.</TextBody>
+                    </div>
+                    <div>
+                        <img src="/mellembowl.webp" alt="mellem skåle af keramik" class="pb-space-100" onclick="my_modal_7.showModal()">
+                        <dialog id="my_modal_7" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/mellembowl.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>
+                        <TextHeading size="xs" stylingclasses="pb-space-050">Mellem skåle</TextHeading>    
+                        <TextBody size="l-regular">250 kr. - 350 kr.</TextBody>
+                    </div>
+                    <div>
+                        <img src="/smallbowl.webp" alt="små skåle af keramik" class="pb-space-100" onclick="my_modal_8.showModal()">
+                        <dialog id="my_modal_8" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/smallbowl.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>                      
+                        <TextHeading size="xs" stylingclasses="pb-space-050">Små skåle</TextHeading>    
+                        <TextBody size="l-regular">100 kr. - 200 kr.</TextBody>
+                    </div>
+                    <div>
+                        <img src="/figurbowl.webp" alt="figur skåle af keramik" class="pb-space-100" onclick="my_modal_9.showModal()">
+                        <dialog id="my_modal_9" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/figurbowl.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>
+                        <TextHeading size="xs" stylingclasses="pb-space-050">Figur skåle og tallerkener</TextHeading>    
+                        <TextBody size="l-regular">150 kr. - 325 kr.</TextBody>
+                    </div>
+                    <div>
+                        <img src="/krukker.webp" alt="krukker af keramik" class="pb-space-100" onclick="my_modal_10.showModal()">
+                        <dialog id="my_modal_10" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/krukker.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>
+                        <TextHeading size="xs" stylingclasses="pb-space-050">Krukker</TextHeading>    
+                        <TextBody size="l-regular">155 kr. - 450 kr.</TextBody>
+                    </div>
+                    <div>
+                        <img src="/kakler.webp" alt="kakler af keramik" class="pb-space-100" onclick="my_modal_11.showModal()">
+                        <dialog id="my_modal_11" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/kakler.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>
+                        <TextHeading size="xs" stylingclasses="pb-space-050">Kakler og skilte</TextHeading>    
+                        <TextBody size="l-regular">40 kr. - 150 kr.</TextBody>
+                    </div>
+                    <div>
+                        <img src="/kander.webp" alt="kander af keramik" class="pb-space-100" onclick="my_modal_12.showModal()">
+                        <dialog id="my_modal_12" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/kander.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>
+                        <TextHeading size="xs" stylingclasses="pb-space-050">Kander</TextHeading>    
+                        <TextBody size="l-regular">175 kr. - 475 kr.</TextBody>
+                    </div>
+                    <div>
+                        <img src="/saltpapper.webp" alt="salt og pepper sæt af keramik" class="pb-space-100" onclick="my_modal_13.showModal()">
+                        <dialog id="my_modal_13" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/saltpapper.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>
+                        <TextHeading size="xs" stylingclasses="pb-space-050">Salt og pepper sæt</TextHeading>    
+                        <TextBody size="l-regular">280 kr. - 400 kr.</TextBody>
+                    </div>
+                    <div>
+                        <img src="/figurkrus.webp" alt="figurkrus af keramik" class="pb-space-100" onclick="my_modal_14.showModal()">
+                        <dialog id="my_modal_14" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/figurkrus.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>
+                        <TextHeading size="xs" stylingclasses="pb-space-050">Figur krus</TextHeading>    
+                        <TextBody size="l-regular">200 kr. - 325 kr.</TextBody>
+                    </div>
+                    <div>
+                        <img src="/figurer.webp" alt="figurer af keramik" class="pb-space-100" onclick="my_modal_15.showModal()">
+                        <dialog id="my_modal_15" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/figurer.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>
+                        <TextHeading size="xs" stylingclasses="pb-space-050">Figurer</TextHeading>    
+                        <TextBody size="l-regular">60 kr. - 350 kr.</TextBody>
+                    </div>
+                    <div>
+                        <img src="/egg.webp" alt="æggebærer af keramik" class="pb-space-100" onclick="my_modal_16.showModal()">
+                        <dialog id="my_modal_16" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/egg.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>
+                        <TextHeading size="xs" stylingclasses="pb-space-050">Æggebæger</TextHeading>    
+                        <TextBody size="l-regular">100 kr. - 200 kr. </TextBody>
+                    </div>
+                    <div>
+                        <img src="/sparegris.webp" alt="sparegrise i figurer af keramik" class="pb-space-100" onclick="my_modal_17.showModal()">
+                        <dialog id="my_modal_17" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/sparegris.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>
+                        <TextHeading size="xs" stylingclasses="pb-space-050">Sparegrise</TextHeading>    
+                        <TextBody size="l-regular">180 kr. - 325 kr.</TextBody>
+                    </div>
+                    <div>
+                        <img src="/storvase.webp" alt="store vaser af keramik" class="pb-space-100" onclick="my_modal_18.showModal()">
+                        <dialog id="my_modal_18" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/storvase.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>
+                        <TextHeading size="xs" stylingclasses="pb-space-050">Store vaser</TextHeading>    
+                        <TextBody size="l-regular">300 kr. - 400 kr.</TextBody>
+                    </div>
+                    <div>
+                        <img src="/lillevase.webp" alt="små vaser af keramik" class="pb-space-100" onclick="my_modal_19.showModal()">
+                        <dialog id="my_modal_19" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/lillevase.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>
+                        <TextHeading size="xs" stylingclasses="pb-space-050">Små vaser</TextHeading>    
+                        <TextBody size="l-regular">100 kr. - 200 kr.</TextBody>
+                    </div>
+                    <div>
+                        <img src="/jul.webp" alt="julepynt af keramik" class="pb-space-100" onclick="my_modal_20.showModal()">
+                        <dialog id="my_modal_20" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/jul.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>
+                        <TextHeading size="xs" stylingclasses="pb-space-050">Jul</TextHeading>    
+                        <TextBody size="l-regular">125 kr. - 325 kr.</TextBody>
+                    </div>
+                    <div>
+                        <img src="/diverse.webp" alt="forskellige ting af keramik" class="pb-space-100" onclick="my_modal_21.showModal()">
+                        <dialog id="my_modal_21" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/diverse.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>
+                        <TextHeading size="xs" stylingclasses="pb-space-050">Diverse</TextHeading>    
+                        <TextBody size="l-regular">180 kr. - 400 kr.</TextBody>
+                    </div>
+                </div>  
+          </div>
     </div>
-  </label>
-  <div class="tab-content bg-primary-500 rounded-xl">
-    <div class="p-space-600">
-      <div class="grid px-space-3200 pt-space-800">
-          <TextHeading size="xl" stylingclasses="pb-space-050">Keramik</TextHeading>
-          <TextBody size="m-regular" stylingclasses="pb-space-1200">Priserne på keramik varierer afhængigt af størrelse og type, men er altid inklusiv maling og brænding. Priserne her på siden er <strong>kun et udpluk af vores sortiment</strong> – vi har et endnu større udvalg i caféen, så der er noget for enhver stil og ethvert budget.</TextBody>    
-      </div>
 
-      <div class="grid grid-cols-4 gap-12">
-          <div>
-            <img src="krus.webp" alt="" class="pb-space-100" onclick="my_modal_2.showModal()">
-                <!-- Open the modal using ID.showModal() method -->
-                <dialog id="my_modal_2" class="modal">
-                  <div class="modal-box bg-primary-500" >
-                      <img src="krus.webp" alt="" class="pb-space-100">
+
+    <!-- SMYKKE -->
+        <label class="tab px-10 py-20 rounded-t-xl">
+        <input type="radio" name="my_tabs_4"/>
+          <div class="flex flex-col items-center gap-2 -mt-18">
+            <img src="/smykke.svg" alt="" class="w-[100px] h-[100px]" />
+            <span><TextHeading size="xs">Smykker</TextHeading></span>
+          </div>
+        </label>
+        <div class="tab-content bg-primary-500 rounded-xl">
+            <div class="p-space-600">
+                <div class="grid px-space-3200 pt-space-800">
+                    <TextHeading size="xl" stylingclasses="pb-space-050">Smykker</TextHeading>
+                    <TextBody size="m-regular" stylingclasses="pb-space-1200">Priserne her på siden <strong>er kun eksempler</strong>. Priserne varierer alt efter produkt og hvilke perler du vælger. Alle perler fra vores perle bar er med i priserne, og derudover kan du tilkøbe større perler f.eks. ferskvandsperler, krystalperler og vedhæng.</TextBody>    
+                </div>
+
+                <div class="grid grid-cols-4 gap-12 pb-space-1200">
+                  <div>
+                        <img src="/armbånd.webp" alt="armbånd af perler" class="pb-space-100" onclick="my_modal_22.showModal()">
+                        <dialog id="my_modal_22" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/armbånd.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>
+                      <TextHeading size="xs" stylingclasses="pb-space-050">Armbånd</TextHeading>    
+                      <TextBody size="l-regular">Fra 149 kr.</TextBody>
                   </div>
-                  <form method="dialog" class="modal-backdrop">
-                    <button>close</button>
-                  </form>
-                </dialog>
-            <TextHeading size="xs" stylingclasses="pb-space-050">Store krus</TextHeading>    
-            <TextBody size="l-regular">150 kr. - 225 kr.</TextBody>
+                  <div>
+                        <img src="/øreringe.webp" alt="øreringe med perler" class="pb-space-100" onclick="my_modal_23.showModal()">
+                        <dialog id="my_modal_23" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/øreringe.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>                    
+                      <TextHeading size="xs" stylingclasses="pb-space-050">Øreringe</TextHeading>    
+                      <TextBody size="l-regular">Fra 149 kr.</TextBody>
+                  </div>
+                  <div>
+                        <img src="/efter.webp" alt="halskæde med perler" class="pb-space-100" onclick="my_modal_24.showModal()">
+                        <dialog id="my_modal_24" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/efter.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>                       
+                      <TextHeading size="xs" stylingclasses="pb-space-050">Halskæde</TextHeading>    
+                      <TextBody size="l-regular">Fra 199 kr.</TextBody>
+                  </div>
+                  <div>
+                        <img src="/ankelkæde.webp" alt="ankelkæde af perler" class="pb-space-100" onclick="my_modal_25.showModal()">
+                        <dialog id="my_modal_25" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/ankelkæde.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>                        
+                      <TextHeading size="xs" stylingclasses="pb-space-050">Ankelkæde</TextHeading>    
+                      <TextBody size="l-regular">Fra 149 kr.</TextBody>
+                  </div>
+                  <div>
+                        <img src="/ring.webp" alt="ring med perler" class="pb-space-100" onclick="my_modal_26.showModal()">
+                        <dialog id="my_modal_26" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/ring.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>                        
+                      <TextHeading size="xs" stylingclasses="pb-space-050">Fingerring</TextHeading>    
+                      <TextBody size="l-regular">Fra 149 kr.</TextBody>
+                  </div>
+                  <div>
+                        <img src="/nøglering.webp" alt="nøglering med perler" class="pb-space-100" onclick="my_modal_27.showModal()">
+                        <dialog id="my_modal_27" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/nøglering.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>                        
+                      <TextHeading size="xs" stylingclasses="pb-space-050">Nøglering</TextHeading>    
+                      <TextBody size="l-regular">Fra 149 kr.</TextBody>
+                  </div>
+                </div>
+                <div class="grid grid-cols-4 gap-12">
+                  <div>
+                        <img src="/ferskvandsperler.webp" alt="ferskvandsperler i en hånd" class="pb-space-100" onclick="my_modal_28.showModal()">
+                        <dialog id="my_modal_28" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/ferskvandsperler.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>                        
+                      <TextHeading size="xs" stylingclasses="pb-space-050">Ferskvandsperler</TextHeading>    
+                      <TextBody size="l-regular">Fra 3 kr. pr. stk</TextBody>
+                  </div>
+                  <div>
+                        <img src="/krystalperler.webp" alt="krystalperler i en hånd" class="pb-space-100" onclick="my_modal_29.showModal()">
+                        <dialog id="my_modal_29" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/krystalperler.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>                        
+                      <TextHeading size="xs" stylingclasses="pb-space-050">Krystalperler</TextHeading>    
+                      <TextBody size="l-regular">Fra 2 kr. pr. stk</TextBody>
+                  </div>
+                  <div>
+                        <img src="/vedhæng.webp" alt="sol vedhæng til smykke" class="pb-space-100" onclick="my_modal_30.showModal()">
+                        <dialog id="my_modal_30" class="modal">
+                          <div class="modal-box bg-primary-500" >
+                            <img src="/vedhæng.webp" alt="" class="pb-space-100">
+                          </div>
+                          <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                          </form>
+                        </dialog>                        
+                      <TextHeading size="xs" stylingclasses="pb-space-050">Vedhæng</TextHeading>    
+                      <TextBody size="l-regular">Fra 10 kr. pr. stk</TextBody>
+                  </div>
+                </div>  
           </div>
-          <div>
-            <img src="smallkrus.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Små krus</TextHeading>    
-            <TextBody size="l-regular">100 kr. - 175 kr.</TextBody>
-          </div>
-          <div>
-            <img src="bigplates.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Store tallerkener</TextHeading>    
-            <TextBody size="l-regular">305 kr. - 650 kr.</TextBody>
-          </div>
-          <div>
-            <img src="smallplates.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Små tallerkener</TextHeading>    
-            <TextBody size="l-regular">100 kr. - 180 kr.</TextBody>
-          </div>
-          <div>
-            <img src="bigbowl.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Store krus</TextHeading>    
-            <TextBody size="l-regular">150 kr. - 225 kr.</TextBody>
-          </div>
-          <div>
-            <img src="mellembowl.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Små krus</TextHeading>    
-            <TextBody size="l-regular">100 kr. - 175 kr.</TextBody>
-          </div>
-          <div>
-            <img src="smallbowl.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Store tallerkener</TextHeading>    
-            <TextBody size="l-regular">305 kr. - 650 kr.</TextBody>
-          </div>
-          <div>
-            <img src="figurbowl.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Små tallerkener</TextHeading>    
-            <TextBody size="l-regular">100 kr. - 180 kr.</TextBody>
-          </div>
-          <div>
-            <img src="krukker.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Store krus</TextHeading>    
-            <TextBody size="l-regular">150 kr. - 225 kr.</TextBody>
-          </div>
-          <div>
-            <img src="kakler.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Små krus</TextHeading>    
-            <TextBody size="l-regular">100 kr. - 175 kr.</TextBody>
-          </div>
-          <div>
-            <img src="kander.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Store tallerkener</TextHeading>    
-            <TextBody size="l-regular">305 kr. - 650 kr.</TextBody>
-          </div>
-          <div>
-            <img src="saltpapper.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Små tallerkener</TextHeading>    
-            <TextBody size="l-regular">100 kr. - 180 kr.</TextBody>
-          </div>
-          <div>
-            <img src="figurkrus.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Store krus</TextHeading>    
-            <TextBody size="l-regular">150 kr. - 225 kr.</TextBody>
-          </div>
-          <div>
-            <img src="figurer.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Små krus</TextHeading>    
-            <TextBody size="l-regular">100 kr. - 175 kr.</TextBody>
-          </div>
-          <div>
-            <img src="egg.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Store tallerkener</TextHeading>    
-            <TextBody size="l-regular">305 kr. - 650 kr.</TextBody>
-          </div>
-          <div>
-            <img src="sparegris.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Små tallerkener</TextHeading>    
-            <TextBody size="l-regular">100 kr. - 180 kr.</TextBody>
-          </div>
-          <div>
-            <img src="storvase.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Store krus</TextHeading>    
-            <TextBody size="l-regular">150 kr. - 225 kr.</TextBody>
-          </div>
-          <div>
-            <img src="lillevase.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Små krus</TextHeading>    
-            <TextBody size="l-regular">100 kr. - 175 kr.</TextBody>
-          </div>
-          <div>
-            <img src="jul.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Store tallerkener</TextHeading>    
-            <TextBody size="l-regular">305 kr. - 650 kr.</TextBody>
-          </div>
-          <div>
-            <img src="diverse.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Små tallerkener</TextHeading>    
-            <TextBody size="l-regular">100 kr. - 180 kr.</TextBody>
-          </div>
-      </div>  
-    </div>
-  </div>
-
-  <!-- SMYKKE -->
-  <label class="tab px-10 py-20 rounded-t-xl">
-    <input type="radio" name="my_tabs_4"/>
-    <div class="flex flex-col items-center gap-2 -mt-18">
-      <img src="/smykke.svg" alt="" class="w-[100px] h-[100px]" />
-      <span><TextHeading size="xs">Smykker</TextHeading></span>
-    </div>
-  </label>
-  <div class="tab-content bg-primary-500 rounded-xl">
-    <div class="p-space-600">
-      <div class="grid px-space-3200 pt-space-800">
-          <TextHeading size="xl" stylingclasses="pb-space-050">Smykker</TextHeading>
-          <TextBody size="m-regular" stylingclasses="pb-space-1200">Priserne her på siden <strong>er kun eksempler</strong>. Priserne varierer alt efter produkt og hvilke perler du vælger. Alle perler fra vores perle bar er med i priserne, og derudover kan du tilkøbe større perler f.eks. ferskvandsperler, krystalperler og vedhæng.</TextBody>    
-      </div>
-
-      <div class="grid grid-cols-4 gap-12 pb-space-1200">
-          <div>
-            <img src="armbånd.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Armbånd</TextHeading>    
-            <TextBody size="l-regular">Fra 149 kr.</TextBody>
-          </div>
-          <div>
-            <img src="øreringe.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Øreringe</TextHeading>    
-            <TextBody size="l-regular">Fra 149 kr.</TextBody>
-          </div>
-          <div>
-            <img src="efter.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Halskæde</TextHeading>    
-            <TextBody size="l-regular">Fra 199 kr.</TextBody>
-          </div>
-          <div>
-            <img src="ankelkæde.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Ankelkæde</TextHeading>    
-            <TextBody size="l-regular">Fra 149 kr.</TextBody>
-          </div>
-          <div>
-            <img src="ring.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Fingerring</TextHeading>    
-            <TextBody size="l-regular">Fra 149 kr.</TextBody>
-          </div>
-          <div>
-            <img src="nøglering.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Nøglering</TextHeading>    
-            <TextBody size="l-regular">Fra 149 kr.</TextBody>
-          </div>
-      </div>
-      <div class="grid grid-cols-4 gap-12">
-          <div>
-            <img src="ferskvandsperler.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Ferskvandsperler</TextHeading>    
-            <TextBody size="l-regular">Fra 3 kr. pr. stk</TextBody>
-          </div>
-          <div>
-            <img src="krystalperler.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Krystalperler</TextHeading>    
-            <TextBody size="l-regular">Fra 2 kr. pr. stk</TextBody>
-          </div>
-          <div>
-            <img src="vedhæng.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Vedhæng</TextHeading>    
-            <TextBody size="l-regular">Fra 10 kr. pr. stk</TextBody>
-          </div>
-      </div>  
-    </div>
-  </div>
+        </div>
 
   <!-- EVENT -->
   <label class="tab px-10 py-20 rounded-t-xl">
@@ -254,7 +478,14 @@ import TextBody from "../components/TextBody.astro";
       </div>  
     </div>
   </div>
+  </div>
 
-
+	<section class="flex flex-col items-center text-center pb-space-1800">
+		  <TextHeading size="m" stylingclasses="pb-space-050">Ekstra forkælelse</TextHeading>
+		  <TextBody size="l-regular" stylingclasses="pb-space-200">Vi har både kolde og varme drikkevarer <br>– også noget søde tand, som du kan nyde, mens du er kreativ.</TextBody>
+		  <div>
+			    <button>hej knap</button>
+		  </div>
+	</section>
 
 </MainLayout>
