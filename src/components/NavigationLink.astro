@@ -1,0 +1,31 @@
+---
+const { href = "#", target = "_self" } = Astro.props;
+
+const currentUrl = Astro.url.pathname;
+const isActive = href === currentUrl;
+
+// Link classes
+const linkClasses = `
+  font-raleway text-body-l text-center text-grey-scale-950
+  ${isActive ? "font-bold" : ""}
+  group-hover:font-bold
+`;
+
+// Underline wrapper classes
+const underlineWrapper = isActive
+  ? `w-28 overflow-hidden ease-out [clip-path:inset(0_0_0_0)] transition-[clip-path] duration-500`
+  : `w-28 overflow-hidden ease-out [clip-path:inset(0_100%_0_0)] 
+     group-hover:[clip-path:inset(0_0_0_0)] 
+     group-hover:transition-[clip-path] 
+     group-hover:duration-500`;
+
+---
+<div class="flex flex-col group items-center">
+  <a href={href} target={target} class={linkClasses}>
+    <slot />
+  </a>
+
+  <div class={underlineWrapper}>
+    <img src="/underline.svg" alt="underline"/>
+  </div>
+</div>

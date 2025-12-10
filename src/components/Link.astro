@@ -1,30 +1,22 @@
 ---
 const { href = "#", target = "_self" } = Astro.props;
 
-// Få den aktuelle sti fra Astro
-const currentUrl = Astro.url.pathname;
-
-// Tjekker om linket matcher den nuværende URL
-const isActive = href === currentUrl;
-
-// Tailwind-classes for linket (kun stor L)
 const linkClasses = `
-  font-raleway text-body-l text-center text-grey-scale-950
-  ${isActive ? "font-bold" : ""}
-  group-hover:font-bold
+  font-raleway text-body-l text-grey-scale-950 px-space-100 hover:font-bold
 `;
 
-// Tailwind-classes for underline
 const underlineClasses = `
-  w-28 opacity-0 duration-200
-  ${isActive ? "opacity-100 translate-y-0" : "group-hover:opacity-100 group-hover:translate-y-0 group-hover:cursor-pointer"}
+  w-30 overflow-hidden transition-[clip-path] duration-500 ease-out
+  [clip-path:inset(0_20%_0_0)]    
+  group-hover:[clip-path:inset(0_0_0_0)]  
 `;
 ---
-<div class="flex flex-col group items-center">
+<div class="flex flex-col group">
   <a href={href} target={target} class={linkClasses}>
     <slot />
   </a>
-  <div>
-    <img src="/underline.svg" alt="underline" class={underlineClasses} />
+
+  <div class={underlineClasses}>
+    <img src="/underline.svg" alt="underline" class="w-full" />
   </div>
 </div>
