@@ -21,9 +21,9 @@ import NavigationLink from "./NavigationLink.astro";
 
  <div class="fixed left-0 right-0 top-[120px] bg-primary-300 invisible group-hover:visible transition-all duration-200 z-40 py-space-400">
     <div class="flex flex-col">
-    <a href="/" class="py-space-250 px-space-3200 font-raleway text-body-m text-grey-scale-950 hover:font-bold">Keramikværkstedet</a>
-    <a href="/" class="py-space-250 px-space-3200 font-raleway text-body-m text-grey-scale-950 hover:font-bold">Smykkeværkstedet</a>
-    <a href="/" class="py-space-250 px-space-3200 font-raleway text-body-m text-grey-scale-950 hover:font-bold">Events</a>
+    <a href="/keramikværksted" class="py-space-250 px-space-3200 font-raleway text-body-m text-grey-scale-950 hover:font-bold">Keramikværkstedet</a>
+    <a href="/smykkeværksted" class="py-space-250 px-space-3200 font-raleway text-body-m text-grey-scale-950 hover:font-bold">Smykkeværkstedet</a>
+    <a href="/events" class="py-space-250 px-space-3200 font-raleway text-body-m text-grey-scale-950 hover:font-bold">Events</a>
     </div>
   </div>
 </div>
@@ -54,25 +54,25 @@ import NavigationLink from "./NavigationLink.astro";
 
 <!-- Burger-menu overlay -->
 <nav id="mobileMenu" class="fixed top-0 right-0 w-screen h-screen bg-primary-200 flex flex-col items-center pt-[200px] space-y-6 transform translate-x-full transition-transform duration-300 lg:hidden z-40 uppercase">
-  <a href="/" class="font-raleway text-body-xl text-grey-scale-950">Koncept</a>
+  <a href="/koncept" class="font-raleway text-body-xl text-grey-scale-950">Koncept</a>
   <details class="w-full group">
   <summary class="flex items-center justify-center font-raleway text-body-xl text-grey-scale-950">
-    <a href="/vores-vaerksteder">Vores værksteder</a>
+    <a href="/vores_verksteder">Vores værksteder</a>
     <svg class="ml-2 w-5 h-5 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
     </svg>
   </summary>
 
   <div class="flex flex-col items-center">
-    <a href="/keramikvaerkstedet" class="py-3 font-raleway text-body-l text-grey-scale-600">Keramikværkstedet</a>
-    <a href="/smykkevaerkstedet" class="py-3 font-raleway text-body-l text-grey-scale-600">Smykkeværkstedet</a>
+    <a href="/keramikværksted" class="py-3 font-raleway text-body-l text-grey-scale-600">Keramikværkstedet</a>
+    <a href="/smykkeværksted" class="py-3 font-raleway text-body-l text-grey-scale-600">Smykkeværkstedet</a>
     <a href="/events" class="py-3 font-raleway text-body-l text-grey-scale-600">Events</a>
   </div>
 </details>
-  <a href="/" class="font-raleway text-body-xl text-grey-scale-950">Hjemme-krea</a>
-  <a href="/" class="font-raleway text-body-xl text-grey-scale-950">Priser</a>
-  <a href="/" class="font-raleway text-body-xl text-grey-scale-950">Praktisk</a>
-  <a href="/" class="font-raleway text-body-xl text-grey-scale-950">Gavekort</a>
+  <a href="/hjemmekasser" class="font-raleway text-body-xl text-grey-scale-950">Hjemme-krea</a>
+  <a href="/priser" class="font-raleway text-body-xl text-grey-scale-950">Priser</a>
+  <a href="/praktisk" class="font-raleway text-body-xl text-grey-scale-950">Praktisk</a>
+  <a href="/gavekort" class="font-raleway text-body-xl text-grey-scale-950">Gavekort</a>
 </nav>
 
 <script>
