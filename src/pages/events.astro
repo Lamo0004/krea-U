@@ -1,0 +1,42 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import TextBody from "../components/TextBody.astro";
+import TextDisplay from "../components/TextDisplay.astro";
+import Pris_Overblik from "../components/Pris_Overblik.astro";
+---
+<MainLayout title="Keramikværksted">
+	<section class="pb-space-1800 -mx-10 md:-mx-60">
+		<div class="relative">
+			<div class="flex flex-col  items-center justify-center text-center pt-space-2800 px-space-600 md:px-space-1400 lg:px-space-2000">
+				<TextDisplay stylingclasses="text-grey-scale-950">Events</TextDisplay>
+				<TextBody size="large" stylingclasses="px-space-600 md:px-space-1400 lg:px-space-3000">I vores kreative værksted kan du deltage i vores inspirerende og hyggelige events.<br>Du kan også afholde dit eget skræddersyede event til enhver anledning, lige her hos KREA-U.</TextBody>
+			</div>
+            
+            <img src="/event_blur.svg" alt="" class="pt-space-3000 absolute -top-23 right-80 w-76 h-auto"/>
+		</div>
+	</section>
+
+    <section>
+        <div class="grid grid-cols-2 gap-15">
+            <div>
+                <TextHeading size="m" stylingclasses="pb-space-300">Det praktiske</TextHeading>
+		        <TextBody size="large" stylingclasses="">Vores værksted ligger centralt i Herning. Du er altid velkommen til at kontakte os, hvis du har spørgsmål eller brug for hjælp. Vi glæder os til, at byde dig velkommen!<br><br>Adresse: Søndergade 16, 7400 Herning<br>E-mail: info@krea-u.dk<br>Telefon: 53 82 12 74<br><br>Mandag: LUKKET<br>Tirsdag - Fredag: 11.30 - 21.00<br>Lørdag - Søndag:  10.00 - 17.00</TextBody>
+            </div>
+        </div>
+    <section>
+
+
+	<Pris_Overblik></Pris_Overblik>
+
+	<figure class="diff aspect-16/9 p-space-400" tabindex="0">
+  		<div class="diff-item-1" role="img" tabindex="0">
+    		<img alt="daisy" src="/smykke_før.webp"/>
+  		</div>
+  		<div class="diff-item-2" role="img">
+    		<img alt="daisy" src="/efter.webp"/>
+  		</div>
+  		<div class="diff-resizer"></div>
+	</figure>
+
+</MainLayout>

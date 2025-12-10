@@ -1,0 +1,40 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import TextBody from "../components/TextBody.astro";
+import TextDisplay from "../components/TextDisplay.astro";
+import PictureLeftBtn from "../components/PictureLeft_Btn.astro";
+import Pris_Overblik from "../components/Pris_Overblik.astro";
+---
+<MainLayout title="Keramikværksted">
+	<section class="pb-space-1800 -mx-10 md:-mx-60">
+		<div class="relative">
+			<div class="flex flex-col  items-center justify-center text-center pt-space-2800 px-space-600 md:px-space-1400 lg:px-space-2000">
+				<TextDisplay stylingclasses="text-grey-scale-950">Smykkeværksted</TextDisplay>
+				<TextBody size="large" stylingclasses="px-space-600 md:px-space-1400 lg:px-space-3000">I vores smykkeværksted kan du designe og lave lige de smykker, du ønsker. <br>Du kan lave præcis det, kreativiteten fører dig til. Vi glæder os til at se dig.</TextBody>
+			</div>
+            
+            <img src="/smykke_blur.svg" alt="" class="pt-space-3000 absolute -top-26 left-53 w-160 h-auto"/>
+		</div>
+	</section>
+
+	<PictureLeftBtn
+		image="/smykkeværksted.webp"
+		alt="smykker på bakke"
+		heading="Design smykker"
+		textbody1="Kom ned i vores værksted og design dine egne smykker.Vi har et stort udvalg af ta’-selv-perler, kæder, vedhæng og smykkedele, så du kan skabe præcis det udtryk, du ønsker eller lave en personlig gave. Vi hjælper dig gerne med idéer, farver og teknikker, så du trygt kan fordybe dig og nyde kreativiteten. Smykkerne laver du færdige i værkstedet og tager med hjem samme dag."
+		textbody2= "Du betaler kun for det smykkedesign og materialer, du vælger. Prisen afhænger altså af de perler og smykkedele, du bruger. Du kan få et overblik over vores priser her."/>
+
+	<Pris_Overblik></Pris_Overblik>
+
+	<figure class="diff aspect-16/9 p-space-400" tabindex="0">
+  		<div class="diff-item-1" role="img" tabindex="0">
+    		<img alt="daisy" src="/smykke_før.webp"/>
+  		</div>
+  		<div class="diff-item-2" role="img">
+    		<img alt="daisy" src="/efter.webp"/>
+  		</div>
+  		<div class="diff-resizer"></div>
+	</figure>
+
+</MainLayout>
