@@ -7,15 +7,17 @@ const { image, alt, heading, textbody1, textbody2 } = Astro.props;
 
 <section class="pb-space-1800 -mx-10 md:-mx-60">
     <div class="bg-primary-500">
-        <div class="grid md:grid-cols-2 place-items-center gap-8 px-space-500 md:px-space-3000 py-space-1600">        
-            <div class="md:pl-space-500">
-                <TextHeading size="xl" stylingclasses="pb-space-025">{heading}</TextHeading>
-                <TextBody size="small-regular" stylingclasses="pb-space-100">{textbody1}</TextBody>
-                <TextBody size="small-regular" stylingclasses="pb-space-300">{textbody2}</TextBody>
-                <button>KLIK HER</button>
-            </div>
+        <div class="grid xl:grid-cols-2 place-items-center gap-8 px-space-500 lg:px-space-2400 py-space-1600">        
+            
             <div>
-                <img src={image} alt={alt} class="w-100 h-100 md:w-150 md:h-150 object-cover"/>
+                <TextHeading size="xl" stylingclasses="pb-space-025">{heading}</TextHeading>
+                <TextBody size="l-regular" stylingclasses="pb-space-100">{textbody1}</TextBody>
+                <TextBody size="l-regular" stylingclasses="pb-space-200">{textbody2}</TextBody>
+                <button class="pb-space-200">KLIK HER</button>
+            </div>
+            
+            <div class="xl:pl-space-500">
+                <img src={image} alt={alt} class="w-100 h-auto md:w-150 md:h-auto object-cover"/>
             </div>
         </div>
     </div>
