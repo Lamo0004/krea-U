@@ -112,7 +112,7 @@
 
   /* Main grid med 3 kolonner */
   main {
-    @apply grid grid-cols-[1fr_minmax(0,1200px)_1fr];
+    @apply grid grid-cols-[1fr_minmax(0,1200px)_1fr] gap-8;
   }
 }
 
