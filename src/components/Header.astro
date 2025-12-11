@@ -6,7 +6,7 @@ import NavigationLink from "./NavigationLink.astro";
 <header class="w-screen flex justify-between lg:justify-center items-center bg-primary-200 fixed z-50 p-6">
 
   <!-- Desktop menu -->
-  <nav class="hidden lg:flex flex-1 gap-8 justify-center items-end uppercase">
+  <nav class="hidden lg:flex flex-1 gap-6 justify-center items-end uppercase">
     <NavigationLink href="/koncept">Koncept</NavigationLink>
     
     <div class="group relative">
@@ -19,7 +19,7 @@ import NavigationLink from "./NavigationLink.astro";
     </div>
 </NavigationLink>
 
- <div class="fixed left-0 right-0 top-[120px] bg-primary-300 invisible group-hover:visible transition-all duration-200 z-40 py-space-400">
+ <div class="fixed left-0 right-0 top-[98px] bg-primary-300 invisible group-hover:visible transition-all duration-200 z-40 py-space-400">
     <div class="flex flex-col">
     <a href="/keramikværksted" class="py-space-250 px-space-3200 font-raleway text-body-m text-grey-scale-950 hover:font-bold">Keramikværkstedet</a>
     <a href="/smykkeværksted" class="py-space-250 px-space-3200 font-raleway text-body-m text-grey-scale-950 hover:font-bold">Smykkeværkstedet</a>
@@ -29,18 +29,18 @@ import NavigationLink from "./NavigationLink.astro";
 </div>
 
     <NavigationLink size="l" href="/hjemmekasser">Hjemme-krea</NavigationLink>
-    <a href="/"><img src="/logo_sort.png" alt="Krea-U logo" class="h-18" /></a>
+    <a href="/"><img src="/logo_sort.png" alt="Krea-U logo" class="w-30 h-auto" /></a>
     <NavigationLink size="l" href="/priser">Priser</NavigationLink>
     <NavigationLink size="l" href="/praktisk">Praktisk</NavigationLink>
     <NavigationLink size="l" href="/gavekort">Gavekort</NavigationLink>
   </nav>
 
 <!-- Knap -->
-  <Button>Book bord</Button>
+  <Button href="https://book.easytable.com/book/?id=35dca" target="_blank">Book bord</Button>
 
-  <!-- Logo på desktop -->
+  <!-- Logo på mobil -->
   <a href="/" class="lg:hidden">
-    <img src="/logo_sort.png" alt="Krea-U logo" class="h-12" />
+    <img src="/logo_sort.png" alt="Krea-U logo" class="h-14" />
   </a>
 
 <!-- Burger-ikon -->
