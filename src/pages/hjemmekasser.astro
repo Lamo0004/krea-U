@@ -11,20 +11,20 @@ import FullBleedSection from "../components/FullBleedSection.astro";
 ---
 <MainLayout title="Hjemmekasser">
     <HeroNiveau2
-        image="hjemmekrea_hero.webp" 
+        image="./hjemmekrea_hero.webp" 
         alt="sættekasse med krus i hullerne" 
         display="Hjemme-krea" 
-        textbody="Tag KREA-U med hjem. Skab ro og hygge med en Hjemme-Krea kasse - Alt, du behøver for at male keramik derhjemme."/>
+        textbody="Tag KREA-U med hjem. Skab ro og hygge med en Hjemme-Krea kasse - Alt, du behøver for at male keramik derhjemme."
+        bgClass="bg-primary-500"/>
 
-    <FullBleedSection stylingclasses="-pt-space-1800">
+    <FullBleedSection>
     <PictureRight_Btn
         heading="Tag med hjem"
 		textbody1="Med vores Hjemme-krea kan du tage KREA-U’s kreative værksted med hjem. Uanset om du ønsker kreativitet alene eller en hyggelig stund med familie/venner, har vi gjort det nemt for dig. "
 		textbody2= "Vælg mellem 3 forskellige kasser, som hver indeholder keramik, maling, pensler og alt det, du skal bruge for at komme i gang. Du kan se kasserne længere nede på siden."
 		textbody3= "Følg vores guide, så du ved præcis, hvad du skal gøre fra start til slut."
-        image="/hjemme-krea.webp"
-		alt="pige der maler"
-    />
+        image="./hjemme-krea.webp"
+		alt="pige der maler"/>
     </FullBleedSection>
 
 	<StepByStep
@@ -42,25 +42,28 @@ import FullBleedSection from "../components/FullBleedSection.astro";
 		fourth_step="Afhent"
 		textbody4="Vi glaserer og brænder dit keramik. Når det er klar, får du besked, og du kan hente det hos os. Ca. 14 dage."/>
    
-    <section class="grid xl:grid-cols-3 gap-28 pb-space-1800 justify-items-center">
-        <div>
-            <img class="w-60 h-auto md:w-60 pb-space-600 object-cover" src="/kasse1.webp" alt="kande"/>
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-28 pb-space-1800">
+        <div class="mx-auto max-w-xs">
+            <img class="w-60 h-auto pb-space-600 object-cover" src="/kasse1.webp" alt="kande"/>
             <TextHeading size="m" stylingclasses="pb-space-050">Keramikværksted</TextHeading>
             <TextBody size="l-regular" stylingclasses="pb-space-050">Mal dit eget keramik i kreative omgivelser. Vælg mellem kopper, skåle, figurer og meget mere.</TextBody>
         </div>
-        <div>
-            <img class="w-60 h-auto md:w-60 pb-space-600 object-cover" src="/kasse2.webp" alt="kande"/>
+
+        <div class="mx-auto max-w-xs">
+            <img class="w-60 h-auto pb-space-600 object-cover" src="/kasse2.webp" alt="kande"/>
             <TextHeading size="m" stylingclasses="pb-space-050">Smykkeværksted</TextHeading>
             <TextBody size="l-regular" stylingclasses="pb-space-050">Design dine egne unikke smykker med perler, vedhæng og farver i vores inspirerende værksted.</TextBody>
         </div>
-        <div>
-            <img class="w-60 h-auto md:w-60 pb-space-600 object-cover" src="/kasse3.webp" alt="kande"/>
+
+        <div class="mx-auto max-w-xs">
+            <img class="w-60 h-auto pb-space-600 object-cover" src="/kasse3.webp" alt="kande"/>
             <TextHeading size="m" stylingclasses="pb-space-050">Events</TextHeading>
             <TextBody size="l-regular" stylingclasses="pb-space-050">Deltag i vores hyggelige events eller book dit helt eget skræddersyede event hos os.</TextBody>
         </div>
     </section>
 
-<div class="grid mg:grid-rows-2 pb-space-1800 md:mx-spacing-3000">
+
+<div class="grid mg:grid-rows-2 pb-space-1800 lg:mx-spacing-3000">
 
     <form name="bestil">
 		<TextHeading size="m" stylingclasses="pb-space-050">Bestil her</TextHeading>
@@ -117,7 +120,7 @@ import FullBleedSection from "../components/FullBleedSection.astro";
                 ></textarea>
         </div>
 
-        <div class="mt-6">
+        <div class="mb-6">
             <p class="font-bold">Yderligere tilvalg</p>
             <div class="flex flex-col gap-2 mt-2">
                 <label class="flex items-center gap-2">
@@ -127,7 +130,7 @@ import FullBleedSection from "../components/FullBleedSection.astro";
         </div>
 
         <!-- Bekræft knap -->
-        <Button />
+        <Button class="pb-space-200">Bestil nu</Button>
     </form>
 
 </MainLayout>

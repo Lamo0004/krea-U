@@ -6,7 +6,7 @@ import TextBody from "./TextBody.astro";
 <!-- jeg bruger den ikke lige nu fordi at jeg ikke kan gennemskue at den ikke bruger md:mx-spacing-3000 på praktisk info, og 
  så skulle den have været lavet om så det er constanter der benyttes i stedet, så pt har jeg lige sat den ind de tre steder -->
 
-<div class="grid mg:grid-rows-2 pb-space-1800 md:mx-spacing-3000">
+<div class="grid mg:grid-rows-2 pb-space-1800 lg:mx-spacing-3000">
 
     <form name="bestil">
 		<TextHeading size="m" stylingclasses="pb-space-050">Bestil her</TextHeading>
@@ -63,7 +63,7 @@ import TextBody from "./TextBody.astro";
                 ></textarea>
         </div>
 
-        <div class="mt-6">
+        <div class="mb-6">
             <p class="font-bold">Yderligere tilvalg</p>
             <div class="flex flex-col gap-2 mt-2">
                 <label class="flex items-center gap-2">
@@ -73,6 +73,6 @@ import TextBody from "./TextBody.astro";
         </div>
 
         <!-- Bekræft knap -->
-        <Button />
+        <Button class="pb-space-200">Bestil nu</Button>
     </form>
 

@@ -2,12 +2,11 @@
 import TextBody from "./TextBody.astro";
 import TextDisplay from "./TextDisplay.astro";
 import FullBleedSection from "./FullBleedSection.astro";
-const { image, alt, display, textbody } = Astro.props;
+const { image, alt, display, textbody, pb } = Astro.props;
 ---
 
 <FullBleedSection>
-    <div class="relative pt-space-1400 pb-space-1800">
-        
+    <div class={`relative pt-space-1400 ${pb}`}>
         <div>
             <img src={image} alt={alt} class="w-full object-cover object-center brightness-50 h-150 md:max-h-180"/>
         </div>

@@ -13,10 +13,11 @@ import FAQ from "../components/FAQ.astro";
     <HeroNiveau2
         image="praktiskinfo_hero.webp" 
         alt="sættekasse med krus i hullerne" 
-        display="Praktisk info"/>
+        display="Praktisk info"
+        pb="pb-space-1800"/>
 
     <section>
-        <div class="grid grid-cols-2 gap-15">
+        <div class="grid md:grid-cols-2 gap-15">
             <div>
                 <TextHeading size="m" stylingclasses="pb-space-300">Det praktiske</TextHeading>
 		        <TextBody size="large" stylingclasses="">Vores værksted ligger centralt i Herning. Du er altid velkommen til at kontakte os, hvis du har spørgsmål eller brug for hjælp. Vi glæder os til, at byde dig velkommen!<br><br>Adresse: Søndergade 16, 7400 Herning<br>E-mail: info@krea-u.dk<br>Telefon: 53 82 12 74<br><br>Mandag: LUKKET<br>Tirsdag - Fredag: 11.30 - 21.00<br>Lørdag - Søndag:  10.00 - 17.00</TextBody>
@@ -63,7 +64,7 @@ import FAQ from "../components/FAQ.astro";
                                     required></textarea>
                         </div>
 
-                        <div class="mt-6">
+                        <div class="mb-6">
                             <p class="font-bold">Yderligere tilvalg</p>
                             <div class="flex flex-col gap-2 mt-2">
                                 <label class="flex items-center gap-2">
@@ -73,7 +74,7 @@ import FAQ from "../components/FAQ.astro";
                         </div>
 
                         <!-- Bekræft knap -->
-                        <Button />
+                         <Button class="pb-space-200">Bestil nu</Button>
                     </form>
             </div>
         </div>

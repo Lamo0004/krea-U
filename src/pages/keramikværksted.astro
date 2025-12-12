@@ -5,6 +5,7 @@ import TextBody from "../components/TextBody.astro";
 import TextDisplay from "../components/TextDisplay.astro";
 import PictureLeftBtn from "../components/PictureLeft_Btn.astro";
 import Pris_Overblik from "../components/Pris_Overblik.astro";
+import FullBleedSection from "../components/FullBleedSection.astro";
 ---
 <MainLayout title="Keramikværksted">
 	<section class="pb-space-1800 -mx-10 md:-mx-60">
@@ -18,23 +19,26 @@ import Pris_Overblik from "../components/Pris_Overblik.astro";
 		</div>
 	</section>
 
-	<PictureLeftBtn
-		image="./keramikværksted.webp"
-		alt="piger der snakker med en dame"
-		heading="Mal dit keramik"
-		textbody1="Kom ned i vores værksted og mal lige det keramik, du ønsker. Vi har et hav af keramik at vælge imellem – kopper, skåle, figurer, fade, vaser og meget mere. Vi hjælper dig gerne med idéer, farver og teknikker, så du trygt kan fordybe dig og nyde kreativiteten."
-		textbody2= "Du betaler kun for det keramik, du vælger at male. Vi sørger for glasering og brænding, så du kan hente dit færdige keramik ca. 14 dage efter. Priserne varierer afhængigt af størrelse og type. Du kan få et overblik over vores priser her."/>
+	<FullBleedSection>
+		<PictureLeftBtn
+			image="./keramikværksted.webp"
+			alt="piger der snakker med en dame"
+			heading="Mal dit keramik"
+			textbody1="Kom ned i vores værksted og mal lige det keramik, du ønsker. Vi har et hav af keramik at vælge imellem – kopper, skåle, figurer, fade, vaser og meget mere. Vi hjælper dig gerne med idéer, farver og teknikker, så du trygt kan fordybe dig og nyde kreativiteten."
+			textbody2= "Du betaler kun for det keramik, du vælger at male. Vi sørger for glasering og brænding, så du kan hente dit færdige keramik ca. 14 dage efter. Priserne varierer afhængigt af størrelse og type. Du kan få et overblik over vores priser her."/>
+    </FullBleedSection>
 
-	<Pris_Overblik></Pris_Overblik>
+		<Pris_Overblik></Pris_Overblik>
 
-	<figure class="diff aspect-16/9 p-space-400" tabindex="0">
-  		<div class="diff-item-1" role="img" tabindex="0">
-    		<img alt="daisy" src="/keramikfør.webp"/>
-  		</div>
-  		<div class="diff-item-2" role="img">
-    		<img alt="daisy" src="/keramikefter.webp"/>
-  		</div>
-  		<div class="diff-resizer"></div>
-	</figure>
+		<figure class="diff aspect-3/4 md:aspect-16/9 md:px-space-400 pb-space-1800" tabindex="0">
+			<div class="diff-item-1" role="img" tabindex="0">
+				<img alt="daisy" src="/keramikfør.webp"/>
+			</div>
+			<div class="diff-item-2" role="img">
+				<img alt="daisy" src="/keramikefter.webp"/>
+			</div>
+			<div class="diff-resizer"></div>
+		</figure>
+
 
 </MainLayout>

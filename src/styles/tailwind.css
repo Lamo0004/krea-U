@@ -158,6 +158,10 @@
   .tab-content {
     border-top-width: 0 !important;
   }
+
+  .bg-primary-custom {
+    background-color: #3b82f6; /* bg-primary-500 */
+  }
 }
 
 @layer utilities {
