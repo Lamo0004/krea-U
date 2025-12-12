@@ -9,9 +9,9 @@ import TextBody from "../components/TextBody.astro";
 import Formular from "../components/Formular.astro"
 import FullBleedSection from "../components/FullBleedSection.astro";
 ---
-<MainLayout title="Hjemmekasser">
+<MainLayout title="Hjemme-krea">
     <HeroNiveau2
-        image="./hjemmekrea_hero.webp" 
+        image="../hjemmekrea_hero.webp" 
         alt="sættekasse med krus i hullerne" 
         display="Hjemme-krea" 
         textbody="Tag KREA-U med hjem. Skab ro og hygge med en Hjemme-Krea kasse - Alt, du behøver for at male keramik derhjemme."
@@ -23,40 +23,40 @@ import FullBleedSection from "../components/FullBleedSection.astro";
 		textbody1="Med vores Hjemme-krea kan du tage KREA-U’s kreative værksted med hjem. Uanset om du ønsker kreativitet alene eller en hyggelig stund med familie/venner, har vi gjort det nemt for dig. "
 		textbody2= "Vælg mellem 3 forskellige kasser, som hver indeholder keramik, maling, pensler og alt det, du skal bruge for at komme i gang. Du kan se kasserne længere nede på siden."
 		textbody3= "Følg vores guide, så du ved præcis, hvad du skal gøre fra start til slut."
-        image="./hjemme-krea.webp"
+        image="../hjemme-krea.webp"
 		alt="pige der maler"/>
     </FullBleedSection>
 
 	<StepByStep
         heading1="Sådan gør du"
-    	image1="./step1.svg"
+    	image1="../step1.svg"
 		first_step="Vælg"
 		textbody1="Se beskrivelserne af vores tre Hjemme-Krea kasser og bestil den, du ønsker. Du får alt du skal det bruge med hjem."
-		image2="./step2.svg"
+		image2="../step2.svg"
         second_step="Mal"
 		textbody2="Lad kreativiteten begynde derhjemme, og mal i dit keramik. Du kan finde masser af inspiration på vores sociale medier."
-		image3="./step3.svg"
+		image3="../step3.svg"
 		third_step="Aflever"
 		textbody3="Når malingen er tør, pakker du keramikken forsigtigt ind og afleverer det hos os. Husk at skrive initialer og dato i bunden."
-		image4="./step4.svg"
+		image4="../step4.svg"
 		fourth_step="Afhent"
 		textbody4="Vi glaserer og brænder dit keramik. Når det er klar, får du besked, og du kan hente det hos os. Ca. 14 dage."/>
    
     <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-28 pb-space-1800">
         <div class="mx-auto max-w-xs">
-            <img class="w-60 h-auto pb-space-600 object-cover" src="./kasse1.webp" alt="kande"/>
+            <img class="w-60 h-auto pb-space-600 object-cover" src="../kasse1.webp" alt="kande"/>
             <TextHeading size="m" stylingclasses="pb-space-050">Keramikværksted</TextHeading>
             <TextBody size="l-regular" stylingclasses="pb-space-050">Mal dit eget keramik i kreative omgivelser. Vælg mellem kopper, skåle, figurer og meget mere.</TextBody>
         </div>
 
         <div class="mx-auto max-w-xs">
-            <img class="w-60 h-auto pb-space-600 object-cover" src="./kasse2.webp" alt="kande"/>
+            <img class="w-60 h-auto pb-space-600 object-cover" src="../kasse2.webp" alt="kande"/>
             <TextHeading size="m" stylingclasses="pb-space-050">Smykkeværksted</TextHeading>
             <TextBody size="l-regular" stylingclasses="pb-space-050">Design dine egne unikke smykker med perler, vedhæng og farver i vores inspirerende værksted.</TextBody>
         </div>
 
         <div class="mx-auto max-w-xs">
-            <img class="w-60 h-auto pb-space-600 object-cover" src="./kasse3.webp" alt="kande"/>
+            <img class="w-60 h-auto pb-space-600 object-cover" src="../kasse3.webp" alt="kande"/>
             <TextHeading size="m" stylingclasses="pb-space-050">Events</TextHeading>
             <TextBody size="l-regular" stylingclasses="pb-space-050">Deltag i vores hyggelige events eller book dit helt eget skræddersyede event hos os.</TextBody>
         </div>
@@ -65,7 +65,7 @@ import FullBleedSection from "../components/FullBleedSection.astro";
 
 <div class="grid mg:grid-rows-2 pb-space-1800 lg:mx-spacing-3000">
 
-    <form name="bestil">
+    <form name="bestil" id="book">
 		<TextHeading size="m-green" stylingclasses="pb-space-050">Bestil her</TextHeading>
 		<TextBody size="large" stylingclasses="pb-space-300">Udfyld formularen med hvilken kasse du ønsker, og hvor mange du vil bestille. Vi pakker det klar til dig og giver besked, når din kasse er klar til afhentning.<br>Du er selvfølgelig også altid velkommen til at købe dine Hjemme-Krea-kasser direkte i butikken.</TextBody>
 

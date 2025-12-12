@@ -1,8 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import HeroNiveau2 from "../components/HeroNiveau2.astro";
-import PictureRight_Btn from "../components/PictureRight_Btn.astro";
-import StepByStep from "../components/StepByStep.astro";
 import Button from "../components/Button.astro";
 import TextHeading from "../components/TextHeading.astro";
 import TextBody from "../components/TextBody.astro";
@@ -11,7 +9,7 @@ import FAQ from "../components/FAQ.astro";
 ---
 <MainLayout title="Praktisk">
     <HeroNiveau2
-        image="./praktiskinfo_hero.webp" 
+        image="../praktiskinfo_hero.webp" 
         alt="sættekasse med krus i hullerne" 
         display="Praktisk info"
         pb="pb-space-1800"/>
@@ -78,7 +76,7 @@ import FAQ from "../components/FAQ.astro";
                     </form>
             </div>
         </div>
-        <img src="./kande_blur.svg" alt="" class="absolute top-80 -right-55 w-100 h-auto"/>
+        <img src="../kande_blur.svg" alt="kande tegning" class="absolute top-80 -right-55 w-100 h-auto"/>
     </section>
 
     <FAQ></FAQ>
