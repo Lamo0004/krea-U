@@ -1,6 +1,7 @@
 ---
 import TextBody from "./TextBody.astro";
 import TextHeading from "./TextHeading.astro";
+import Button from "./Button.astro";
 const { image, alt, heading, textbody1, textbody2, textbody3 } = Astro.props;
 ---
 
@@ -15,7 +16,7 @@ const { image, alt, heading, textbody1, textbody2, textbody3 } = Astro.props;
                 <TextBody size="l-regular" stylingclasses="pb-space-100">{textbody1}</TextBody>
                 <TextBody size="l-regular" stylingclasses="pb-space-100">{textbody2}</TextBody>
                 <TextBody size="l-regular" stylingclasses="pb-space-200">{textbody3}</TextBody>
-                <button>KNAP FIS</button>
+                <Button href="/koncept">Mød konceptet</Button>
             </div>
         </div>
     </div>

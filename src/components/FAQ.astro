@@ -1,50 +1,51 @@
-<section class="w-[700px]">
-  <h1>Ofte stillede spørgsmål</h1>
+---
+import TextHeading from "./TextHeading.astro"
+import TextBody from "./TextBody.astro"
+---
 
-  <article class="collapse collapse-arrow bg-base-100 border border-base-300">
-    <input type="checkbox" />
-    <div class="collapse-title font-semibold flex items-center">
+<section class="pb-space-1800 mx-auto">
+  <TextHeading size="m">Ofte stillede spørgsmål</TextHeading>
+
+  <article class="collapse collapse-arrow">
+    <input type="checkbox"/>
+    <div class="collapse-title before:pl-10 after:left-4 font-semibold flex items-center">
+        <TextHeading size="xs">
       Skal jeg booke bord, eller kan jeg bare komme forbi?
+      </TextHeading>
     </div>
-    <div class="collapse-content text-sm">
+    <div class="collapse-content text-sm pl-14 max-w-[700px]">
+      <TextBody size="m-regular">
       Du er altid velkommen til at kigge forbi, men vi anbefaler at booke bord for at være sikker på en plads — især i weekender og ferieperioder. <br> Når du booker, vælger du, om du vil sidde i keramikværkstedet eller smykkeværkstedet.
+      </TextBody>
+   
     </div>
   </article>
 
-  <article class="collapse collapse-arrow bg-base-100 border border-base-300">
+  <article class="collapse collapse-arrow">
     <input type="checkbox" />
-    <div class="collapse-title font-semibold flex items-center">
+    <div class="collapse-title before:pl-10 after:left-4 font-semibold flex items-center">
+      <TextHeading size="xs">
       Hvornår kan jeg hente mit keramik – og hvad hvis det går i stykker?
+      </TextHeading>
     </div>
-    <div class="collapse-content text-sm">
+    <div class="collapse-content text-sm pl-14 max-w-[700px]">
+      <TextBody size="m-regular">
       Dit keramik er klar til afhentning ca. 14 dage efter du har været i vores værksted. <br> Når du har malet, udfylder du en seddel med dit telefonnummer, og vi sender dig en SMS, så snart dit keramik er klar til afhentning.
+    </TextBody>
     </div>
   </article>
 
-  <article class="collapse collapse-arrow bg-base-100 border border-base-300">
-    <input type="checkbox" />
-    <div class="collapse-title font-semibold flex items-center">
+  <article class="collapse collapse-arrow">
+    <input type="checkbox"/>
+    <div class="collapse-title before:pl-10 after:left-4 font-semibold flex items-center">
+      <TextHeading size="xs">
       Hvor lang tid tager det – og hvor længe har vi bordet?
+      </TextHeading>
     </div>
-    <div class="collapse-content text-sm">
+    <div class="collapse-content text-sm pl-14 max-w-[700px]">
+      <TextBody size="m-regular">
       Du har dit bord i 2 timer, uanset om du maler keramik eller laver smykker. <br> Det er altid en god idé, at du finder lidt inspiration hjemmefra, så du får mest muligt ud af din kreative tid i værkstedet.
-    </div>
-  </article>
-</section>
-
-<section class="w-[700px]">
-  <h1>Ofte stillede spørgsmål</h1>
-
-  <article class="collapse bg-base-100 border border-base-300">
-    <input type="checkbox" />
-    <div class="collapse-title font-semibold flex flex-row-reverse items-center justify-between">
-      <span>Skal jeg booke bord, eller kan jeg bare komme forbi?</span>
-      <svg class="w-5 h-5 transition-transform duration-300 transform rotate-0 collapse-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-      </svg>
-    </div>
-    <div class="collapse-content text-sm">
-      Du er altid velkommen til at kigge forbi, men vi anbefaler at booke bord for at være sikker på en plads — især i weekender og ferieperioder. <br> Når du booker, vælger du, om du vil sidde i keramikværkstedet eller smykkeværkstedet.
+    </TextBody>
     </div>
   </article>
 </section>
