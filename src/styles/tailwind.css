@@ -101,6 +101,21 @@
   --background-blur-55: blur(6px) opacity(0.55);
 }
 
+/* Lille bounce animation */
+@keyframes bounce-small {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px); /* mindre hop end standard */
+  }
+}
+
+.bounce-small {
+  animation: bounce-small 1s infinite ease-in-out;
+}
+
 @layer base {
   *,
   ::after,
