@@ -5,6 +5,15 @@ import HeroNiveau2 from "../components/HeroNiveau2.astro";
 import TextHeading from "../components/TextHeading.astro";
 import TextBody from "../components/TextBody.astro";
 import MenukortSektion from "../components/MenukortSektion.astro";
+
+const produkter_keramik = await fetch ("https://aeslhyivpbmaoavnrodx.supabase.co/rest/v1/keramik", {
+  method: "GET",
+  headers: {
+    apikey:
+    "sb_publishable_EoFLjjiMttOAawzCkoJltQ_IXbKg01Y"
+  },
+} 
+).then((res) => res.json()); 
 ---
 <MainLayout title="Priser">
     <HeroNiveau2
