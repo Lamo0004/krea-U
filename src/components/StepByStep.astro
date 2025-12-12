@@ -1,40 +1,52 @@
 ---
 import TextBody from "./TextBody.astro";
 import TextHeading from "./TextHeading.astro";
-const {heading1, first_step, second_step, third_step, fourth_step, textbody1, textbody2, textbody3, textbody4} = Astro.props;
+const {heading1, image1, image2, image3, image4, alt, first_step, second_step, third_step, fourth_step, textbody1, textbody2, textbody3, textbody4} = Astro.props;
 ---
 
-<section class="pb-space-1800">
+<section class="pb-space-1800 md:px-space-1000">
     <TextHeading size="xl" stylingclasses="pb-space-500">{heading1}</TextHeading>
     
-    <div class="grid items-start md:grid-cols-2 xl:grid-cols-4 place-items-center gap-14 md:gap-20">
-        <div>
-            <div class="flex items-end pb-space-200">
-                <img src="et.svg" alt="et tal icon" class="w-13 h-13"/>
-                <TextHeading size="m">{first_step}</TextHeading>
+    <div class="grid items-center lg:grid-cols-2 place-items-center gap-20">
+        <div class="grid grid-cols-2 items-center gap-6">
+            <img src={image1} alt={alt}>
+            <div>
+                <div class="flex items-end pb-space-200">
+                    <img src="et.svg" alt="et tal icon" class="w-13 h-13"/>
+                    <TextHeading size="m">{first_step}</TextHeading>
+                </div>
+                <TextBody size="l-regular">{textbody1}</TextBody>
             </div>
-            <TextBody size="l-regular">{textbody1}</TextBody>
         </div>
-        <div>
-            <div class="flex items-end pb-space-200">
-                <img src="to.svg" alt="to tal icon" class="w-13 h-13"/>
-                <TextHeading size="m">{second_step}</TextHeading>
+        <div class="grid grid-cols-2 items-center gap-6">
+            <img src={image2} alt={alt}>
+            <div>
+                <div class="flex items-end pb-space-200">
+                    <img src="to.svg" alt="to tal icon" class="w-13 h-13"/>
+                    <TextHeading size="m">{second_step}</TextHeading>
+                </div>
+                <TextBody size="l-regular">{textbody2}</TextBody>
             </div>
-            <TextBody size="l-regular">{textbody2}</TextBody>
         </div>
-        <div>
-            <div class="flex items-end pb-space-200">
-                <img src="tre.svg" alt="tre tal icon" class="w-13 h-13"/>
-                <TextHeading size="m">{third_step}</TextHeading>
+        <div class="grid grid-cols-2 items-center gap-6">
+            <img src={image3} alt={alt}>
+            <div>
+                <div class="flex items-end pb-space-200">
+                    <img src="tre.svg" alt="tre tal icon" class="w-13 h-13"/>
+                    <TextHeading size="m">{third_step}</TextHeading>
+                </div>
+                <TextBody size="l-regular">{textbody3}</TextBody>
             </div>
-            <TextBody size="l-regular">{textbody3}</TextBody>
-        </div>        
-        <div>
-            <div class="flex items-end pb-space-200">
-                <img src="fire.svg" alt="fire tal icon" class="w-13 h-13"/>
-                <TextHeading size="m">{fourth_step}</TextHeading>
+        </div>
+        <div class="grid grid-cols-2 items-center gap-6">
+            <img src={image4} alt={alt}>
+            <div>
+                <div class="flex items-end pb-space-200">
+                    <img src="fire.svg" alt="fire tal icon" class="w-13 h-13"/>
+                    <TextHeading size="m">{fourth_step}</TextHeading>
+                </div>
+                <TextBody size="l-regular">{textbody4}</TextBody>
             </div>
-            <TextBody size="l-regular">{textbody4}</TextBody>
         </div>
     </div>
 </section>
