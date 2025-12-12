@@ -3,10 +3,14 @@ import Button from "./Button.astro";
 import NavigationLink from "./NavigationLink.astro";
 ---
 
-<header class="w-screen flex justify-between lg:justify-center items-center bg-primary-200 fixed z-50 p-6">
+<header class="w-screen flex justify-between items-center bg-primary-200 fixed z-50 p-6">
+
+  <!-- Spacer venstre (kun desktop) -->
+  <div class="hidden lg:block w-[100px]"></div>
+
 
   <!-- Desktop menu -->
-  <nav class="hidden lg:flex gap-6 justify-center items-end uppercase">
+  <nav class="hidden lg:flex gap-4 xl:gap-8 justify-center items-end uppercase">
     <NavigationLink href="/koncept">Koncept</NavigationLink>
     
     <div class="group relative">
@@ -40,14 +44,16 @@ import NavigationLink from "./NavigationLink.astro";
 
   <!-- Logo på mobil -->
   <a href="/" class="lg:hidden">
-    <img src="/logo_sort.png" alt="Krea-U logo" class="h-14" />
+    <img src="/logo_sort.png" alt="Krea-U logo" class="w-25 h-auto md:w-35" />
   </a>
 
 <!-- Burger-ikon -->
-  <button id="burger" class="lg:hidden relative z-50">
+  <button id="burger" class="lg:hidden relative z-50 w-[140px] h-[40px] md:w-[180px] md:h-[50px]">
+    <div class="flex flex-col justify-self-end">
     <span class="block w-6 h-0.5 bg-grey-scale-950 mb-1 transition-transform duration-300"></span>
     <span class="block w-6 h-0.5 bg-grey-scale-950 mb-1 transition-opacity duration-300"></span>
     <span class="block w-6 h-0.5 bg-grey-scale-950 transition-transform duration-300"></span>
+    </div>
   </button>
 
 </header>
