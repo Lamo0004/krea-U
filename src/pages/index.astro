@@ -10,6 +10,7 @@ import StepByStep from "../components/StepByStep.astro";
 import Link from "../components/Link.astro";
 import FullBleedSection from "../components/FullBleedSection.astro";
 import ButtonSecondary from "../components/ButtonSecondary.astro";
+import MenukortSektion from "../components/MenukortSektion.astro";
 ---
 <MainLayout title="Forside">
 	<FullBleedSection>
@@ -46,14 +47,7 @@ import ButtonSecondary from "../components/ButtonSecondary.astro";
 		fourth_step="Afhent"
 		textbody4="Smykker tager du med hjem med det samme. Keramik glaserer og brænder vi. Du kan hente det ca. 14 dage efter."/>
 
-	<section class="flex flex-col items-center text-center pb-space-1800">
-		<TextHeading size="m" stylingclasses="pb-space-050">Ekstra forkælelse</TextHeading>
-		<TextBody size="l-regular" stylingclasses="pb-space-200">Vi har både kolde og varme drikkevarer <br>– også noget søde tand, som du kan nyde, mens du er kreativ.</TextBody>
-		<div class="flex gap-5">
-			 <Button href="https://book.easytable.com/book/?id=35dca" target="_blank">Book bord</Button>
-			 <ButtonSecondary href="https://krea-u.dk/vi-tilbyder/menukort" target="_blank">Se menukort</ButtonSecondary>
-		</div>
-	</section>
+	<MenukortSektion></MenukortSektion>
 
 </MainLayout>
 
