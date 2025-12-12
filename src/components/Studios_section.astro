@@ -6,19 +6,28 @@ import Link from "./Link.astro";
 ---
 <section class="grid md:grid-cols-2 xl:grid-cols-3 gap-35 lg:gap-50 max-w-[1200px] pr-space-3000 md:pr-space-500 pb-space-1800">
     <div>
-        <img class="max-w-70 object-center pb-space-600" src="/keramik.svg" alt="kande"/>
+        <div class="relative">
+            <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10" src="./keramik_white.svg" alt="kande"/>
+            <img class="w-full brightness-50 object-center" src="./keramikeunder.webp" alt="malet keramik på en drejeskive">
+        </div>
         <TextHeading size="m" stylingclasses="pb-space-050">Keramikværksted</TextHeading>
         <TextBody size="l-regular" stylingclasses="pb-space-200">Mal dit eget keramik i kreative omgivelser. Vælg mellem kopper, skåle, figurer og meget mere.</TextBody>
         <Link>Læs mere</Link>
     </div>
     <div>
-        <img class="max-w-70 object-center pb-space-600" src="/smykke.svg" alt="kande"/>
+        <div class="relative">
+            <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10" src="./smykke_white.svg" alt="smykke"/>
+            <img class="w-full brightness-50 object-center" src="./smykkeunder.webp" alt="malet keramik på en drejeskive">
+        </div>        
         <TextHeading size="m" stylingclasses="pb-space-050">Smykkeværksted</TextHeading>
         <TextBody size="l-regular" stylingclasses="pb-space-200">Design dine egne unikke smykker med perler, vedhæng og farver i vores inspirerende værksted.</TextBody>
         <Link>Læs mere</Link>
     </div>
     <div>
-        <img class="max-w-70 object-center pb-space-600" src="/event.svg" alt="kande"/>
+        <div class="relative">
+            <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10" src="./event_white.svg" alt="forklæde"/>
+            <img class="w-full brightness-50 object-center" src="./eventunder.webp" alt="malet keramik på en drejeskive">
+        </div>        
         <TextHeading size="m" stylingclasses="pb-space-050">Events</TextHeading>
         <TextBody size="l-regular" stylingclasses="pb-space-200">Deltag i vores hyggelige events eller book dit helt eget skræddersyede event hos os.</TextBody>
         <Link>Læs mere</Link>
