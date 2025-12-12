@@ -3,14 +3,14 @@ import Button from "./Button.astro";
 import NavigationLink from "./NavigationLink.astro";
 ---
 
-<header class="w-screen flex justify-between items-center bg-primary-200 fixed z-50 p-6">
+<header class="w-screen flex justify-between items-center bg-primary-200 fixed z-50 p-space-300">
 
   <!-- Spacer venstre (kun desktop) -->
-  <div class="hidden lg:block w-[100px]"></div>
+  <div class="hidden xl:block w-[100px]"></div>
 
 
   <!-- Desktop menu -->
-  <nav class="hidden lg:flex gap-4 xl:gap-8 justify-center items-end uppercase">
+  <nav class="hidden xl:flex gap-4 xl:gap-8 justify-center items-end uppercase">
     <NavigationLink href="/koncept">Koncept</NavigationLink>
     
     <div class="group relative">
@@ -43,12 +43,12 @@ import NavigationLink from "./NavigationLink.astro";
   <Button href="https://book.easytable.com/book/?id=35dca" target="_blank">Book bord</Button>
 
   <!-- Logo på mobil -->
-  <a href="/" class="lg:hidden">
+  <a href="/" class="xl:hidden">
     <img src="/logo_sort.png" alt="Krea-U logo" class="w-25 h-auto md:w-35" />
   </a>
 
 <!-- Burger-ikon -->
-  <button id="burger" class="lg:hidden relative z-50 w-[140px] h-[40px] md:w-[180px] md:h-[50px]">
+  <button id="burger" class="xl:hidden relative z-50 w-[140px] h-[40px] md:w-[180px] md:h-[50px]">
     <div class="flex flex-col justify-self-end">
     <span class="block w-6 h-0.5 bg-grey-scale-950 mb-1 transition-transform duration-300"></span>
     <span class="block w-6 h-0.5 bg-grey-scale-950 mb-1 transition-opacity duration-300"></span>
@@ -59,7 +59,7 @@ import NavigationLink from "./NavigationLink.astro";
 </header>
 
 <!-- Burger-menu overlay -->
-<nav id="mobileMenu" class="fixed top-0 right-0 w-screen h-screen bg-primary-200 flex flex-col items-center pt-[200px] space-y-6 transform translate-x-full transition-transform duration-300 lg:hidden z-40 uppercase">
+<nav id="mobileMenu" class="fixed top-0 right-0 w-screen h-screen bg-primary-200 flex flex-col items-center pt-[200px] space-y-6 transform translate-x-full transition-transform duration-300 xl:hidden z-40 uppercase">
   <a href="/koncept" class="font-raleway text-body-xl text-grey-scale-950">Koncept</a>
   <details class="w-full group">
   <summary class="flex items-center justify-center font-raleway text-body-xl text-grey-scale-950">
