@@ -1,10 +1,10 @@
 ---
 import TextBody from "./TextBody.astro";
 import TextHeading from "./TextHeading.astro";
-const { produkt } = Astro.props; // Samler property med dataen op
+const { produkt, href } = Astro.props; // Samler property med dataen op
 ---
 <div>
-    <img src={produkt.image} alt="lorem" class="pb-space-100 hover:cursor-pointer" onclick={`document.getElementById('${produkt.id}').showModal()`}>
+    <img src={produkt.image} alt="lorem" class="pb-space-100 hover:cursor-pointer">
     <dialog id={produkt.id} class="modal">
         <div class="modal-box bg-primary-500" >
             <img src=`${produkt.image}` alt="lorem" class="pb-space-100">
