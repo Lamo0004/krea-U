@@ -5,11 +5,12 @@ const Htmlheading = htmlheading;
  
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige størrelser.
 const sizeClasses = {
-"xl": "text-heading-xl",
-"l": "text-heading-l",
-"m": "text-heading-m",
-"s": "text-heading-s",
-"xs": "text-heading-xs",
+"xl": "text-heading-xl text-accent-600",
+"l": "text-heading-l text-accent-600",
+"m-green": "text-heading-m text-accent-600",
+"m": "text-heading-m text-accent-950",
+"s": "text-heading-s text-accent-950",
+"xs": "text-heading-xs text-accent-950",
 };
 ---
-<Htmlheading class:list={[sizeClasses[size], "font-raleway font-semibold uppercase text-grey-scale-950", stylingclasses]}><slot /></Htmlheading>
+<Htmlheading class:list={[sizeClasses[size], "font-raleway font-semibold uppercase", stylingclasses]}><slot /></Htmlheading>
