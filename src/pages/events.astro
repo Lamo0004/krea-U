@@ -1,11 +1,12 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
 import TextBody from "../components/TextBody.astro";
 import TextHeading from "../components/TextHeading.astro";
 import TextDisplay from "../components/TextDisplay.astro";
 import Pris_Overblik from "../components/Pris_Overblik.astro";
+import FullBleedSection from "../components/FullBleedSection.astro";
 ---
+
 <MainLayout title="Keramikværksted">
 	<section class="pb-space-1800 -mx-10 md:-mx-60">
 		<div class="relative">
@@ -14,12 +15,12 @@ import Pris_Overblik from "../components/Pris_Overblik.astro";
 				<TextBody size="large" stylingclasses="px-space-600 md:px-space-1400 lg:px-space-3000">I vores kreative værksted kan du deltage i vores inspirerende og hyggelige events.<br>Du kan også afholde dit eget skræddersyede event til enhver anledning, lige her hos KREA-U.</TextBody>
 			</div>
             
-            <img src="/event_blur.svg" alt="" class="pt-space-3000 absolute -top-23 right-80 w-76 h-auto"/>
+            <img src="./event_blur.svg" alt="" class="pt-space-3000 absolute -top-23 right-80 w-76 h-auto"/>
 		</div>
 	</section>
 
     <section>
-        <div class="grid grid-cols-2 gap-15 pb-space-1800">
+        <div class="grid md:grid-cols-2 gap-15 pb-space-1800">
             <div>
                 <TextHeading size="l" stylingclasses="pb-space-300">Vores events</TextHeading>
 		        <TextBody size="large" stylingclasses="pb-space-300">Vi afholder løbende events, hvor du kan fordybe dig og lære nye teknikker. Vi afholder blandt andet “Ler fra bunden”, hvor du former din egen keramik, samt kreative hyggeaftener i værkstedet.<br>Vi tilbyder også smykkeevents, temaaftener som “Mal & Drik” samt workshops. KREA-U’s events er for alle – uanset erfaring – og vi guider dig gennem processen.<br><br>Vores events er populære, så hold gerne øje på eventsiden og vores sociale medier for nye datoer. Indimellem tilbyder vi også særlige rabatter – så det kan godt betale sig at følge med. Se vores kommende events</TextBody>
@@ -36,10 +37,14 @@ import Pris_Overblik from "../components/Pris_Overblik.astro";
 
 	<Pris_Overblik></Pris_Overblik>
 
-    <section class="grid md:grid-cols-3 place-items-center gap-10 md:gap-28 -mx-10 md:-mx-70 pb-space-1800">
-        <img src="events1.webp" alt="" class="w-80 h-80 md:w-125 md:h-125">
-        <img src="events2.webp" alt="" class="w-80 h-80 md:w-125 md:h-125">
-        <img src="events3.webp" alt="" class="w-80 h-80 md:w-125 md:h-125">
+
+        <FullBleedSection>
+    <section class="grid grid-cols-3 gap-5 pb-space-1800">
+            <img src="./events1.webp" alt="en skål der er blevet malet på" class="h-auto w-125 object-cover object-center justify-self-start">
+            <img src="./events2.webp" alt="to piger der sidder og maler" class="h-auto w-125 object-cover object-center justify-self-center">
+            <img src="./events3.webp" alt="perle udvalg og en opslagtavle med perler" class="h-auto w-125 object-cover object-center justify-self-end">
     </section>
+    </FullBleedSection>
+
 
 </MainLayout>
