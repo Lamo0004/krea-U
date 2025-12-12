@@ -1,0 +1,18 @@
+---
+import TextBody from "./TextBody.astro";
+import TextHeading from "./TextHeading.astro";
+const { image1, alt1, image2, alt2, heading, textbody } = Astro.props;
+---
+<div>
+    <img src={image1} alt={alt1} class="pb-space-100" onclick=`my_modal_2.showModal()``>
+    <dialog id="my_modal_2" class="modal">
+        <div class="modal-box bg-primary-500" >
+            <img src={image2} alt={alt2} class="pb-space-100">
+        </div>
+        <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+        </form>
+    </dialog>
+    <TextHeading size="xs" stylingclasses="pb-space-050">{heading}</TextHeading>    
+    <TextBody size="l-regular">{textbody}</TextBody>
+</div>
