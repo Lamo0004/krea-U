@@ -1,9 +1,9 @@
 ---
 import TextBody from "./TextBody.astro";
 import TextHeading from "./TextHeading.astro";
-const { produkt, href } = Astro.props; // Samler property med dataen op
+const { produkt } = Astro.props; // Samler property med dataen op
 ---
-<div>
+<a href=https://book.easytable.com/book/?id=35dca target="_blank">
     <img src={produkt.image} alt="lorem" class="pb-space-100 hover:cursor-pointer">
     <dialog id={produkt.id} class="modal">
         <div class="modal-box bg-primary-500" >
@@ -15,4 +15,4 @@ const { produkt, href } = Astro.props; // Samler property med dataen op
     </dialog>
     <TextHeading size="xs" stylingclasses="pb-space-050">{produkt.name}</TextHeading>    
     <TextBody size="l-regular">{produkt.price}</TextBody>
-</div>
+</a>

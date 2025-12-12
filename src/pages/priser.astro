@@ -1,11 +1,13 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
+import ButtonSecondary from "../components/ButtonSecondary.astro";
 import HeroNiveau2 from "../components/HeroNiveau2.astro";
 import TextHeading from "../components/TextHeading.astro";
 import TextBody from "../components/TextBody.astro";
 import MenukortSektion from "../components/MenukortSektion.astro";
 import Pris_Card from "../components/Pris_Card.astro";
+import EventCard from "../components/EventCard.astro";
 
 const produkter_keramik = await fetch ("https://aeslhyivpbmaoavnrodx.supabase.co/rest/v1/keramik", {
   method: "GET",
@@ -17,6 +19,15 @@ const produkter_keramik = await fetch ("https://aeslhyivpbmaoavnrodx.supabase.co
 ).then((res) => res.json()); 
 
 const produkter_smykker = await fetch ("https://aeslhyivpbmaoavnrodx.supabase.co/rest/v1/smykker", {
+  method: "GET",
+  headers: {
+    apikey:
+    "sb_publishable_EoFLjjiMttOAawzCkoJltQ_IXbKg01Y"
+  },
+} 
+).then((res) => res.json()); 
+
+const produkter_events = await fetch ("https://aeslhyivpbmaoavnrodx.supabase.co/rest/v1/events", {
   method: "GET",
   headers: {
     apikey:
@@ -75,132 +86,16 @@ const produkter_smykker = await fetch ("https://aeslhyivpbmaoavnrodx.supabase.co
                     <TextBody size="m-regular" stylingclasses="pb-space-1200">Priserne her på siden <strong>er kun eksempler</strong>. Priserne varierer alt efter produkt og hvilke perler du vælger. Alle perler fra vores perle bar er med i priserne, og derudover kan du tilkøbe større perler f.eks. ferskvandsperler, krystalperler og vedhæng.</TextBody>    
                 </div>
 
-                 <ul class="grid grid-cols-4 gap-12">
-                  {produkter_smykker.map((produkt) => (  // Dataen 'produkt' sendes med til Card
+                 <ul class="grid grid-cols-4 gap-12 pb-space-1200">
+                  {produkter_smykker.slice(0, 6).map((produkt) => (  // Dataen 'produkt' sendes med til Card
                   <Pris_Card produkt={produkt}></Pris_Card>
                   ))}
                 </ul>
-                <div class="grid grid-cols-4 gap-12 pb-space-1200">
-                  <div>
-                        <img src="/armbånd.webp" alt="armbånd af perler" class="pb-space-100" onclick="my_modal_22.showModal()">
-                        <dialog id="my_modal_22" class="modal">
-                          <div class="modal-box bg-primary-500" >
-                            <img src="/armbånd.webp" alt="" class="pb-space-100">
-                          </div>
-                          <form method="dialog" class="modal-backdrop">
-                            <button>close</button>
-                          </form>
-                        </dialog>
-                      <TextHeading size="xs" stylingclasses="pb-space-050">Armbånd</TextHeading>    
-                      <TextBody size="l-regular">Fra 149 kr.</TextBody>
-                  </div>
-                  <div>
-                        <img src="/øreringe.webp" alt="øreringe med perler" class="pb-space-100" onclick="my_modal_23.showModal()">
-                        <dialog id="my_modal_23" class="modal">
-                          <div class="modal-box bg-primary-500" >
-                            <img src="/øreringe.webp" alt="" class="pb-space-100">
-                          </div>
-                          <form method="dialog" class="modal-backdrop">
-                            <button>close</button>
-                          </form>
-                        </dialog>                    
-                      <TextHeading size="xs" stylingclasses="pb-space-050">Øreringe</TextHeading>    
-                      <TextBody size="l-regular">Fra 149 kr.</TextBody>
-                  </div>
-                  <div>
-                        <img src="/efter.webp" alt="halskæde med perler" class="pb-space-100" onclick="my_modal_24.showModal()">
-                        <dialog id="my_modal_24" class="modal">
-                          <div class="modal-box bg-primary-500" >
-                            <img src="/efter.webp" alt="" class="pb-space-100">
-                          </div>
-                          <form method="dialog" class="modal-backdrop">
-                            <button>close</button>
-                          </form>
-                        </dialog>                       
-                      <TextHeading size="xs" stylingclasses="pb-space-050">Halskæde</TextHeading>    
-                      <TextBody size="l-regular">Fra 199 kr.</TextBody>
-                  </div>
-                  <div>
-                        <img src="/ankelkæde.webp" alt="ankelkæde af perler" class="pb-space-100" onclick="my_modal_25.showModal()">
-                        <dialog id="my_modal_25" class="modal">
-                          <div class="modal-box bg-primary-500" >
-                            <img src="/ankelkæde.webp" alt="" class="pb-space-100">
-                          </div>
-                          <form method="dialog" class="modal-backdrop">
-                            <button>close</button>
-                          </form>
-                        </dialog>                        
-                      <TextHeading size="xs" stylingclasses="pb-space-050">Ankelkæde</TextHeading>    
-                      <TextBody size="l-regular">Fra 149 kr.</TextBody>
-                  </div>
-                  <div>
-                        <img src="/ring.webp" alt="ring med perler" class="pb-space-100" onclick="my_modal_26.showModal()">
-                        <dialog id="my_modal_26" class="modal">
-                          <div class="modal-box bg-primary-500" >
-                            <img src="/ring.webp" alt="" class="pb-space-100">
-                          </div>
-                          <form method="dialog" class="modal-backdrop">
-                            <button>close</button>
-                          </form>
-                        </dialog>                        
-                      <TextHeading size="xs" stylingclasses="pb-space-050">Fingerring</TextHeading>    
-                      <TextBody size="l-regular">Fra 149 kr.</TextBody>
-                  </div>
-                  <div>
-                        <img src="/nøglering.webp" alt="nøglering med perler" class="pb-space-100" onclick="my_modal_27.showModal()">
-                        <dialog id="my_modal_27" class="modal">
-                          <div class="modal-box bg-primary-500" >
-                            <img src="/nøglering.webp" alt="" class="pb-space-100">
-                          </div>
-                          <form method="dialog" class="modal-backdrop">
-                            <button>close</button>
-                          </form>
-                        </dialog>                        
-                      <TextHeading size="xs" stylingclasses="pb-space-050">Nøglering</TextHeading>    
-                      <TextBody size="l-regular">Fra 149 kr.</TextBody>
-                  </div>
-                </div>
-                <div class="grid grid-cols-4 gap-12">
-                  <div>
-                        <img src="/ferskvandsperler.webp" alt="ferskvandsperler i en hånd" class="pb-space-100" onclick="my_modal_28.showModal()">
-                        <dialog id="my_modal_28" class="modal">
-                          <div class="modal-box bg-primary-500" >
-                            <img src="/ferskvandsperler.webp" alt="" class="pb-space-100">
-                          </div>
-                          <form method="dialog" class="modal-backdrop">
-                            <button>close</button>
-                          </form>
-                        </dialog>                        
-                      <TextHeading size="xs" stylingclasses="pb-space-050">Ferskvandsperler</TextHeading>    
-                      <TextBody size="l-regular">Fra 3 kr. pr. stk</TextBody>
-                  </div>
-                  <div>
-                        <img src="/krystalperler.webp" alt="krystalperler i en hånd" class="pb-space-100" onclick="my_modal_29.showModal()">
-                        <dialog id="my_modal_29" class="modal">
-                          <div class="modal-box bg-primary-500" >
-                            <img src="/krystalperler.webp" alt="" class="pb-space-100">
-                          </div>
-                          <form method="dialog" class="modal-backdrop">
-                            <button>close</button>
-                          </form>
-                        </dialog>                        
-                      <TextHeading size="xs" stylingclasses="pb-space-050">Krystalperler</TextHeading>    
-                      <TextBody size="l-regular">Fra 2 kr. pr. stk</TextBody>
-                  </div>
-                  <div>
-                        <img src="/vedhæng.webp" alt="sol vedhæng til smykke" class="pb-space-100" onclick="my_modal_30.showModal()">
-                        <dialog id="my_modal_30" class="modal">
-                          <div class="modal-box bg-primary-500" >
-                            <img src="/vedhæng.webp" alt="" class="pb-space-100">
-                          </div>
-                          <form method="dialog" class="modal-backdrop">
-                            <button>close</button>
-                          </form>
-                        </dialog>                        
-                      <TextHeading size="xs" stylingclasses="pb-space-050">Vedhæng</TextHeading>    
-                      <TextBody size="l-regular">Fra 10 kr. pr. stk</TextBody>
-                  </div>
-                </div>  
+                <ul class="grid grid-cols-4 gap-12">
+                  {produkter_smykker.slice(6, 9).map((produkt) => (  // Dataen 'produkt' sendes med til Card
+                  <Pris_Card produkt={produkt}></Pris_Card>
+                  ))}
+                </ul>
           </div>
         </div>
 
@@ -217,34 +112,16 @@ const produkter_smykker = await fetch ("https://aeslhyivpbmaoavnrodx.supabase.co
       <div class="grid px-space-3200 py-space-800">
           <TextHeading size="xl" stylingclasses="pb-space-050">Events</TextHeading>
           <TextBody size="m-regular" stylingclasses="pb-space-200">Her på siden vises <strong>et udpluk</strong> af vores mange forskellige events – holde øje med vores kommende events på booking-siden og på vores sociale medier. Hvis du ønsker <strong>et skræddersyet event</strong>, er du altid velkommen til at kontakte os, så vi finder den løsning, der passer bedst til dig/jer.</TextBody>    
-              <div>
-                  <button>klik</button>
-                  <button>klik</button>
-              </div>
-        </div>
-
-      <div class="grid grid-cols-4 gap-12">
           <div>
-            <img src="krea_bobler.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Perler og bobler</TextHeading>    
-            <TextBody size="l-regular">349 kr.</TextBody>
+              <Button>Book event</Button>
+              <ButtonSecondary>Kontakt</ButtonSecondary>
           </div>
-          <div>
-            <img src="ler_bunden.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Ler for bunden</TextHeading>    
-            <TextBody size="l-regular">600 kr.</TextBody>
-          </div>
-          <div>
-            <img src="kreaklub.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Kreaklub for børn</TextHeading>    
-            <TextBody size="l-regular">800 kr.</TextBody>
-          </div>
-          <div>
-            <img src="ler_flag.webp" alt="" class="pb-space-100">
-            <TextHeading size="xs" stylingclasses="pb-space-050">Ler, fest og flag</TextHeading>    
-            <TextBody size="l-regular">500 kr.</TextBody>
-          </div>
-      </div>  
+      </div>
+      <ul class="grid grid-cols-4 gap-12">
+          {produkter_events.map((produkt) => (  // Dataen 'produkt' sendes med til Card
+          <EventCard produkt={produkt}></EventCard>
+          ))}
+      </ul>
     </div>
   </div>
   </div>
