@@ -101,19 +101,25 @@
   --background-blur-55: blur(6px) opacity(0.55);
 }
 
-/* Lille bounce animation */
-@keyframes bounce-small {
-  0%,
-  100% {
-    transform: translateY(0);
+@keyframes arrowAnimationKeyframe {
+  0% {
+    clip-path: inset(0 0 100% 0);
   }
-  50% {
-    transform: translateY(-5px); /* mindre hop end standard */
+  40%,
+  60% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 100% 0);
   }
 }
 
-.bounce-small {
-  animation: bounce-small 1s infinite ease-in-out;
+.arrow-animate {
+  animation-name: arrowAnimationKeyframe;
+  animation-duration: 3000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  overflow: hidden;
 }
 
 @layer base {
