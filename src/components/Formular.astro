@@ -2,15 +2,14 @@
 import Button from "./Button.astro";
 import TextHeading from "./TextHeading.astro";
 import TextBody from "./TextBody.astro";
+const {heading, textbody1, textbody2, felt, besked, mx} = Astro.props;
 ---
-<!-- jeg bruger den ikke lige nu fordi at jeg ikke kan gennemskue at den ikke bruger md:mx-spacing-3000 på praktisk info, og 
- så skulle den have været lavet om så det er constanter der benyttes i stedet, så pt har jeg lige sat den ind de tre steder -->
-
-<div class="grid mg:grid-rows-2 pb-space-1800 lg:mx-spacing-3000">
+<div class={`pb-space-1800 ${mx}`}>
 
     <form name="bestil">
-		<TextHeading size="m" stylingclasses="pb-space-050">Bestil her</TextHeading>
-		<TextBody size="large" stylingclasses="pb-space-300">Udfyld formularen med hvilken kasse du ønsker, og hvor mange du vil bestille. Vi pakker det klar til dig og giver besked, når din kasse er klar til afhentning.<br>Du er selvfølgelig også altid velkommen til at købe dine Hjemme-Krea-kasser direkte i butikken.</TextBody>
+        <TextHeading size="m-green" stylingclasses="pb-space-050">{heading}</TextHeading>
+        <TextBody size="l-regular" stylingclasses="pb-space-050">{textbody1}</TextBody>
+        <TextBody size="l-regular" stylingclasses="pb-space-300">{textbody2}</TextBody>
 
         <!-- Fuld navn felt -->
         <div class="grid mb-6">
@@ -51,13 +50,13 @@ import TextBody from "./TextBody.astro";
             />
         </div>
 
-        <!-- Bestillingsønsker felt -->
+        <!-- Besked felt -->
         <div class="grid mb-6">
-            <label for="bestilling" class="pb-space-050">Bestillingsønsker</label>
+            <label for="bestilling" class="pb-space-050">{felt}</label>
                 <textarea
                     id="bestilling"
                     name="bestilling"
-                    placeholder="Skriv dine ønsker til din Hjemme-Krea-Kasse her"
+                    placeholder={besked}
                     class="border-1 border-accent-600 p-space-050 resize-none h-32"
                     required
                 ></textarea>
@@ -75,4 +74,4 @@ import TextBody from "./TextBody.astro";
         <!-- Bekræft knap -->
         <Button class="pb-space-200">Bestil nu</Button>
     </form>
-
+</div>
