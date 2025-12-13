@@ -49,9 +49,9 @@
   --color-warning: #yellow;
 
   /* Typografi størrelser */
-  --text-display: clamp(50px, 8vw, 90px);
+  --text-display: clamp(45px, 8vw, 90px);
 
-  --text-heading-xl: clamp(40px, 40px + 0.5vw, 48px);
+  --text-heading-xl: clamp(38px, 38px + 0.5vw, 48px);
   --text-heading-l: clamp(36px, 36px + 0.3vw, 40px);
   --text-heading-m: clamp(30px, 30px + 0.2vw, 32px);
   --text-heading-s: clamp(24px, 24px + 0.3vw, 28px);
