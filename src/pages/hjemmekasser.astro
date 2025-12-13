@@ -15,7 +15,7 @@ import FullBleedSection from "../components/FullBleedSection.astro";
         alt="sættekasse med krus i hullerne" 
         display="Hjemme-krea" 
         textbody="Tag KREA-U med hjem. Skab ro og hygge med en Hjemme-Krea kasse - Alt, du behøver for at male keramik derhjemme."
-        bgClass="bg-primary-500"/>
+        />
 
     <FullBleedSection>
     <PictureRight_Btn
@@ -41,7 +41,8 @@ import FullBleedSection from "../components/FullBleedSection.astro";
 		image4="../step4.svg"
 		fourth_step="Afhent"
 		textbody4="Vi glaserer og brænder dit keramik. Når det er klar, får du besked, og du kan hente det hos os. Ca. 14 dage."/>
-   
+
+
     <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-28 pb-space-1800">
         <div class="mx-auto max-w-xs">
             <img class="w-60 h-auto pb-space-600 object-cover" src="../kasse1.webp" alt="kande"/>
@@ -62,75 +63,12 @@ import FullBleedSection from "../components/FullBleedSection.astro";
         </div>
     </section>
 
-
-<div class="grid mg:grid-rows-2 pb-space-1800 lg:mx-spacing-3000">
-
-    <form name="bestil" id="book">
-		<TextHeading size="m-green" stylingclasses="pb-space-050">Bestil her</TextHeading>
-		<TextBody size="large" stylingclasses="pb-space-300">Udfyld formularen med hvilken kasse du ønsker, og hvor mange du vil bestille. Vi pakker det klar til dig og giver besked, når din kasse er klar til afhentning.<br>Du er selvfølgelig også altid velkommen til at købe dine Hjemme-Krea-kasser direkte i butikken.</TextBody>
-
-        <!-- Fuld navn felt -->
-        <div class="grid mb-6">
-            <label for="full-name" class="pb-space-050">Dit fulde navn</label>
-                <input
-                    class="border-1 border-accent-600 p-space-050"
-                    placeholder="Peter Jensen"
-                    id="full-name"
-                    name="fname"
-                    type="text"
-                    required
-                />
-        </div>
-
-        <!-- Email felt -->
-        <div class="grid mb-6">
-            <label for="email" class="pb-space-050">E-mail</label>
-                <input
-                    class="border-1 border-accent-600 p-space-050"
-                    placeholder="peter@mail.dk"
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                />
-        </div>
-
-        <!-- Telefonnummer felt -->
-        <div class="grid mb-6">
-            <label for="telephone" class="pb-space-050">Telefonnummer</label>
-                <input
-                    class="border-1 border-accent-600 p-space-050"
-                    id="telephone"
-                    name="telephone"
-                    type="tel"
-                    placeholder="12 34 56 78"
-                    required
-            />
-        </div>
-
-        <!-- Bestillingsønsker felt -->
-        <div class="grid mb-6">
-            <label for="bestilling" class="pb-space-050">Bestillingsønsker</label>
-                <textarea
-                    id="bestilling"
-                    name="bestilling"
-                    placeholder="Skriv dine ønsker til din Hjemme-Krea-Kasse her"
-                    class="border-1 border-accent-600 p-space-050 resize-none h-32"
-                    required
-                ></textarea>
-        </div>
-
-        <div class="mb-6">
-            <p class="font-bold">Yderligere tilvalg</p>
-            <div class="flex flex-col gap-2 mt-2">
-                <label class="flex items-center gap-2">
-                <input type="checkbox" checked="checked" class="checkbox"/>Jeg stoler på at i behandler mine data indefor GDPR Logivning
-                </label>
-            </div>
-        </div>
-
-        <!-- Bekræft knap -->
-        <Button class="pb-space-200">Bestil nu</Button>
-    </form>
-
+    <Formular
+            mx="mx-spacing-3000"
+            heading="Bestil her"
+            textbody1="Udfyld formularen med hvilken kasse du ønsker, og hvor mange du vil bestille. Vi pakker det klar til dig og giver besked, når din kasse er klar til afhentning."
+            textbody2="Du er selvfølgelig også altid velkommen til at købe dine Hjemme-Krea-kasser direkte i butikken."
+            felt="Din bestilling"
+            besked="Skriv dit ønske til Hjemme-Krea-kasse her"/>
+            
 </MainLayout>
