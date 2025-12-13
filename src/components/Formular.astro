@@ -13,7 +13,7 @@ const {heading, textbody1, textbody2, felt, besked, mx} = Astro.props;
 
         <!-- Fuld navn felt -->
         <div class="grid mb-6">
-            <label for="full-name" class="pb-space-050">Dit fulde navn</label>
+            <label for="full-name" class="pb-space-050"><TextBody size="l-regular">Dit fulde navn</TextBody></label>
                 <input
                     class="border-1 border-accent-600 p-space-050"
                     placeholder="Peter Jensen"
@@ -26,7 +26,7 @@ const {heading, textbody1, textbody2, felt, besked, mx} = Astro.props;
 
         <!-- Email felt -->
         <div class="grid mb-6">
-            <label for="email" class="pb-space-050">E-mail</label>
+            <label for="email" class="pb-space-050"><TextBody size="l-regular">E-mail</TextBody></label>
                 <input
                     class="border-1 border-accent-600 p-space-050"
                     placeholder="peter@mail.dk"
@@ -39,7 +39,7 @@ const {heading, textbody1, textbody2, felt, besked, mx} = Astro.props;
 
         <!-- Telefonnummer felt -->
         <div class="grid mb-6">
-            <label for="telephone" class="pb-space-050">Telefonnummer</label>
+            <label for="telephone" class="pb-space-050"><TextBody size="l-regular">Telefonnummer</TextBody></label>
                 <input
                     class="border-1 border-accent-600 p-space-050"
                     id="telephone"
@@ -52,7 +52,7 @@ const {heading, textbody1, textbody2, felt, besked, mx} = Astro.props;
 
         <!-- Besked felt -->
         <div class="grid mb-6">
-            <label for="bestilling" class="pb-space-050">{felt}</label>
+            <label for="bestilling" class="pb-space-050"><TextBody size="l-regular">{felt}</TextBody></label>
                 <textarea
                     id="bestilling"
                     name="bestilling"
@@ -63,11 +63,11 @@ const {heading, textbody1, textbody2, felt, besked, mx} = Astro.props;
         </div>
 
         <div class="mb-6">
-            <p class="font-bold">Yderligere tilvalg</p>
+            <TextBody size="l-regular">Yderligere tilvalg</TextBody>
             <div class="flex flex-col gap-2 mt-2">
                 <label class="flex items-center gap-2">
-                <input type="checkbox" checked="checked" class="checkbox"/>Jeg stoler på at i behandler mine data indefor GDPR Logivning
-                </label>
+                <input type="checkbox" checked="checked" class="checkbox"/><TextBody size="l-regular">Jeg stoler på at i behandler mine data indefor GDPR Logivning
+                </TextBody></label>
             </div>
         </div>
 
