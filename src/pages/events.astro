@@ -5,18 +5,18 @@ import TextHeading from "../components/TextHeading.astro";
 import TextDisplay from "../components/TextDisplay.astro";
 import Pris_Overblik from "../components/Pris_Overblik.astro";
 import FullBleedSection from "../components/FullBleedSection.astro";
+import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="Events">
-	<section class="pb-space-1800 -mx-10 md:-mx-60">
+	<section class="pb-space-1800">
 		<div class="relative">
-			<div class="flex flex-col  items-center justify-center text-center pt-space-2800 px-space-600 md:px-space-1400 lg:px-space-2000">
+			<div class="flex flex-col  items-center justify-center text-center pt-space-800 px-space-200 md:px-space-1400 lg:px-space-2000">
 				<TextDisplay color="black" stylingclasses="text-grey-scale-950">Events</TextDisplay>
-				<TextBody size="large" stylingclasses="px-space-600 md:px-space-1400 lg:px-space-3000">I vores kreative værksted kan du deltage i vores inspirerende og hyggelige events.<br>Du kan også afholde dit eget skræddersyede event til enhver anledning, lige her hos KREA-U.</TextBody>
+				<TextBody size="large" stylingclasses="px-space-200">I vores kreative værksted kan du deltage i vores inspirerende og hyggelige events.<br>Du kan også afholde dit eget skræddersyede event til enhver anledning, lige her hos KREA-U.</TextBody>
 			</div>
-            
-            <img src="../event_blur.svg" alt="" class="pt-space-3000 absolute -top-23 right-80 w-76 h-auto"/>
 		</div>
+         <img src="../event_blur.svg" alt="" class="absolute top-60 left-3/5 w-70 h-auto"/>
 	</section>
 
     <section>
@@ -24,12 +24,12 @@ import FullBleedSection from "../components/FullBleedSection.astro";
             <div>
                 <TextHeading size="l" stylingclasses="pb-space-300">Vores events</TextHeading>
 		        <TextBody size="large" stylingclasses="pb-space-300">Vi afholder løbende events, hvor du kan fordybe dig og lære nye teknikker. Vi afholder blandt andet “Ler fra bunden”, hvor du former din egen keramik, samt kreative hyggeaftener i værkstedet.<br>Vi tilbyder også smykkeevents, temaaftener som “Mal & Drik” samt workshops. KREA-U’s events er for alle – uanset erfaring – og vi guider dig gennem processen.<br><br>Vores events er populære, så hold gerne øje på eventsiden og vores sociale medier for nye datoer. Indimellem tilbyder vi også særlige rabatter – så det kan godt betale sig at følge med. Se vores kommende events</TextBody>
-                <button>Knap lige her</button>
+                <Button href="https://book.easytable.com/book/?id=35dca" target="_blank">Book event</Button>
             </div>
             <div>
                 <TextHeading size="l" stylingclasses="pb-space-300">Dit eget event</TextHeading>
 		        <TextBody size="large" stylingclasses="pb-space-300">I KREA-U kan du også samle venner, familie eller kollegaer til et helt personligt og skræddersyet event. Det kan være fødselsdag, venindeaften eller et personalearrangement. Vi hjælper jer med at skabe rammen for en hyggelig og kreativ oplevelse.<br><br>I betaler kun for det, I laver i værkstedet, og vi står klar med inspiration, idéer og teknikker. <br>Kontakt os for nærmere information om muligheder og priser, så vi sammen kan skabe det perfekte event for dig eller jer. Kontakt os for dit eget skræddersyet event.</TextBody>
-                <button>Knap lige her</button>
+                <Button href="/praktisk/#kontakt_formular">Kontakt os</Button>
             </div>
         </div>
     <section>
