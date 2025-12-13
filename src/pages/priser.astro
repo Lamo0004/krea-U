@@ -44,25 +44,25 @@ const produkter_events = await fetch ("https://aeslhyivpbmaoavnrodx.supabase.co/
         textbody="Hos KREA-U betales der ikke for et bord, men kun for det, du laver. Herunder finder du et overblik over priser på keramik, smykker og events, så du kan planlægge dit besøg hos os."/>
 
 
-    <div class="tabs tabs-lift gap-x-25 justify-center pb-space-1800">
+    <div class="tabs tabs-lift gap-x-0 sm:gap-x-10 lg:gap-x-25 justify-center pb-space-800 md:pb-space-1800">
 
     <!-- KERAMIK -->
-        <label class="tab px-10 py-20 rounded-t-xl">
+        <label class="tab px-2 py-5 md:px-10 md:py-20 rounded-t-xl">
         <input type="radio" name="my_tabs_4" checked/>
-            <div class="flex flex-col items-center gap-2 -mt-18">
-                <img src="../keramik.svg" alt="" class="w-[100px] h-[100px]" />
+            <div class="flex flex-col items-center gap-2 -mt-3 md:-mt-18">
+                <img src="../keramik.svg" alt="" class="hidden md:inline w-[100px] h-[100px]" />
                 <span><TextHeading size="xs">Keramik</TextHeading></span>
             </div>
         </label>
 
         <div class="tab-content bg-primary-500 rounded-xl">
             <div class="p-space-600">
-                <div class="grid px-space-3200 pt-space-800">
+                <div class="grid pt-space-800 lg:px-space-3200">
                     <TextHeading size="xl" stylingclasses="pb-space-050">Keramik</TextHeading>
                     <TextBody size="m-regular" stylingclasses="pb-space-1200">Priserne på keramik varierer afhængigt af størrelse og type, men er altid inklusiv maling og brænding. Priserne her på siden er <strong>kun et udpluk af vores sortiment</strong> – vi har et endnu større udvalg i caféen, så der er noget for enhver stil og ethvert budget.</TextBody>    
                 </div>
 
-              <ul class="grid grid-cols-4 gap-12">
+              <ul class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
                 {produkter_keramik.map((produkt) => (  // Dataen 'produkt' sendes med til Card
                 <Pris_Card produkt={produkt}></Pris_Card>
                 ))}
@@ -72,52 +72,53 @@ const produkter_events = await fetch ("https://aeslhyivpbmaoavnrodx.supabase.co/
 
 
     <!-- SMYKKE -->
-        <label class="tab px-10 py-20 rounded-t-xl">
+        <label class="tab px-2 py-5 md:px-10 md:py-20 rounded-t-xl">
         <input type="radio" name="my_tabs_4"/>
-          <div class="flex flex-col items-center gap-2 -mt-18">
-            <img src="../smykke.svg" alt="" class="w-[100px] h-[100px]" />
+          <div class="flex flex-col items-center gap-2 -mt-3 md:-mt-18">
+            <img src="../smykke.svg" alt="" class="hidden md:inline w-[100px] h-[100px]"/>
             <span><TextHeading size="xs">Smykker</TextHeading></span>
           </div>
         </label>
         <div class="tab-content bg-primary-500 rounded-xl">
             <div class="p-space-600">
-                <div class="grid px-space-3200 pt-space-800">
+                <div class="grid pt-space-800 lg:px-space-3200">
                     <TextHeading size="xl" stylingclasses="pb-space-050">Smykker</TextHeading>
                     <TextBody size="m-regular" stylingclasses="pb-space-1200">Priserne her på siden <strong>er kun eksempler</strong>. Priserne varierer alt efter produkt og hvilke perler du vælger. Alle perler fra vores perle bar er med i priserne, og derudover kan du tilkøbe større perler f.eks. ferskvandsperler, krystalperler og vedhæng.</TextBody>    
                 </div>
 
-                 <ul class="grid grid-cols-4 gap-12 pb-space-1200">
+                 <ul class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 pb-space-1200">
                   {produkter_smykker.slice(0, 6).map((produkt) => (  // Dataen 'produkt' sendes med til Card
                   <Pris_Card produkt={produkt}></Pris_Card>
                   ))}
                 </ul>
-                <ul class="grid grid-cols-4 gap-12">
+                <ul class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
                   {produkter_smykker.slice(6, 9).map((produkt) => (  // Dataen 'produkt' sendes med til Card
                   <Pris_Card produkt={produkt}></Pris_Card>
                   ))}
                 </ul>
+                
           </div>
         </div>
 
   <!-- EVENT -->
-  <label class="tab px-10 py-20 rounded-t-xl">
+  <label class="tab px-2 py-5 md:px-10 md:py-20 rounded-t-xl">
     <input type="radio" name="my_tabs_4" />
-    <div class="flex flex-col items-center gap-2 -mt-18">
-      <img src="../event.svg" alt="" class="w-[100px] h-[100px]" />
+    <div class="flex flex-col items-center gap-2 -mt-3 md:-mt-18">
+      <img src="../event.svg" alt="" class="hidden md:inline w-[100px] h-[100px]" />
       <span><TextHeading size="xs">Events</TextHeading></span>
     </div>
   </label>
   <div class="tab-content bg-primary-500 rounded-xl">
     <div class="p-space-600">
-      <div class="grid px-space-3200 py-space-800">
+      <div class="grid py-space-800 lg:px-space-3200">
           <TextHeading size="xl" stylingclasses="pb-space-050">Events</TextHeading>
           <TextBody size="m-regular" stylingclasses="pb-space-200">Her på siden vises <strong>et udpluk</strong> af vores mange forskellige events – holde øje med vores kommende events på booking-siden og på vores sociale medier. Hvis du ønsker <strong>et skræddersyet event</strong>, er du altid velkommen til at kontakte os, så vi finder den løsning, der passer bedst til dig/jer.</TextBody>    
-          <div class="flex gap-5">
+          <div class="flex gap-2 lg:gap-5">
               <Button href="https://book.easytable.com/book/?id=35dca" target="_blank">Book event</Button>
-              <ButtonSecondary href="/praktisk">Kontakt os</ButtonSecondary>
+              <ButtonSecondary href="/praktisk/#kontakt_formular">Kontakt os</ButtonSecondary>
           </div>
       </div>
-      <ul class="grid grid-cols-4 gap-12">
+      <ul class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           {produkter_events.map((produkt) => (  // Dataen 'produkt' sendes med til Card
           <EventCard produkt={produkt}></EventCard>
           ))}
