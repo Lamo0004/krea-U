@@ -28,20 +28,26 @@ import FullBleedSection from "../components/FullBleedSection.astro";
 
 		<Pris_Overblik></Pris_Overblik>
 
-		<figure class="diff aspect-3/4 md:aspect-16/9 md:px-space-400 pb-space-1800">
-  <div class="diff-item-1">
-    <img alt="før" src="../keramikfør.webp" />
+		<figure class="diff aspect-3/4 md:aspect-16/9 md:px-space-400 pb-space-1800" tabindex="0">
+			<div class="diff-item-1" role="img" tabindex="0">
+				<img alt="daisy" src="../keramikfør.webp"/>
+			</div>
+			<div class="diff-item-2" role="img">
+				<img alt="daisy" src="../keramikefter.webp"/>
+			</div>
+			<input type="range" class="diff-resizer"></input>
+		</figure>
+		<figure class="diff aspect-16/9" tabindex="0">
+			
+  <div class="diff-item-1" role="img" tabindex="0">
+    <div class="bg-primary text-primary-content grid place-content-center text-9xl font-black">
+      DAISY
+    </div>
   </div>
-  <div class="diff-item-2">
-    <img alt="efter" src="../keramikefter.webp" />
+  <div class="diff-item-2" role="img">
+    <div class="bg-base-200 grid place-content-center text-9xl font-black">DAISY</div>
   </div>
-  <input
-    type="range"
-    min="0"
-    max="100"
-    value="50"
-    class="diff-resizer"
-  />
+  <div class="diff-resizer"></div>
 </figure>
 
 
