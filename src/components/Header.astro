@@ -3,7 +3,7 @@ import Button from "./Button.astro";
 import NavigationLink from "./NavigationLink.astro";
 ---
 
-<header class="w-screen flex justify-between items-center bg-primary-200 fixed z-50 p-space-300">
+<header class="w-full flex justify-between items-center bg-primary-200 fixed z-50 p-space-300">
 
   <!-- Spacer venstre (kun desktop) -->
   <div class="hidden xl:block w-[100px]"></div>
@@ -59,7 +59,7 @@ import NavigationLink from "./NavigationLink.astro";
 </header>
 
 <!-- Burger-menu overlay -->
-<nav id="mobileMenu" class="fixed top-0 right-0 w-screen h-screen bg-primary-200 flex flex-col items-center pt-[200px] space-y-6 transform translate-x-full transition-transform duration-300 xl:hidden z-40 uppercase">
+<nav id="mobileMenu" class="fixed top-0 right-0 w-full h-full bg-primary-200 flex flex-col items-center pt-[200px] space-y-6 transform translate-x-full transition-transform duration-300 xl:hidden z-40 uppercase">
   <a href="/koncept" class="font-raleway text-body-xl text-grey-scale-950">Koncept</a>
   <details class="w-full group">
   <summary class="flex items-center justify-center font-raleway text-body-xl text-grey-scale-950">
