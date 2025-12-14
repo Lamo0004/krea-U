@@ -23,7 +23,10 @@ import FullBleedSection from "../components/FullBleedSection.astro";
 		textbody2= "Vælg mellem 3 forskellige kasser, som hver indeholder keramik, maling, pensler og alt det, du skal bruge for at komme i gang. Du kan se kasserne længere nede på siden."
 		textbody3= "Følg vores guide, så du ved præcis, hvad du skal gøre fra start til slut."
         image="../hjemme-krea.webp"
-		alt="pige der maler"/>
+		alt="pige der maler"
+        href="#formular"
+		button="Bestil nu"/>
+
     </FullBleedSection>
 
 	<StepByStep
@@ -64,13 +67,15 @@ import FullBleedSection from "../components/FullBleedSection.astro";
         </div>
     </section>
 
-    <Formular
-            mx="lg:mx-spacing-3000"
-            heading="Bestil her"
-            textbody1="Udfyld formularen med hvilken kasse du ønsker, og hvor mange du vil bestille. Vi pakker det klar til dig og giver besked, når din kasse er klar til afhentning."
-            textbody2="Du er selvfølgelig også altid velkommen til at købe dine Hjemme-Krea-kasser direkte i butikken."
-            felt="Din bestilling"
-            besked="Skriv dit ønske til Hjemme-Krea-kasse her"
-            knap="Bestil nu"/>
+    <div id="formular">
+        <Formular
+                mx="lg:mx-spacing-3000"
+                heading="Bestil her"
+                textbody1="Udfyld formularen med hvilken kasse du ønsker, og hvor mange du vil bestille. Vi pakker det klar til dig og giver besked, når din kasse er klar til afhentning."
+                textbody2="Du er selvfølgelig også altid velkommen til at købe dine Hjemme-Krea-kasser direkte i butikken."
+                felt="Din bestilling"
+                besked="Skriv dit ønske til Hjemme-Krea-kasse her"
+                knap="Bestil nu"/>
+    </div>
 
 </MainLayout>
