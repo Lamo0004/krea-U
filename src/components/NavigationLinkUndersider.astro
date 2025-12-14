@@ -1,0 +1,27 @@
+---
+const { href = "#", target = "_self" } = Astro.props;
+
+const currentUrl = Astro.url.pathname;
+const isActive = href === currentUrl;
+
+const linkClasses = `
+font-raleway text-body-m text-grey-scale-950
+  ${isActive ? "font-bold" : ""}
+  hover:font-bold
+`;
+
+// Brug group/item så den IKKE reagerer på parent .group
+const underlineWrapper = isActive
+  ? "w-22 overflow-hidden [clip-path:inset(0_0_0_0)]"
+  : "w-22 overflow-hidden [clip-path:inset(0_100%_0_0)] group-hover/item:[clip-path:inset(0_0_0_0)] transition-[clip-path] duration-300";
+---
+
+<div class="flex flex-col group/item py-space-250 px-space-3200">
+  <a href={href} target={target} class={linkClasses}>
+    <slot />
+  </a>
+
+  <div class={underlineWrapper}>
+    <img src="../underline.svg" alt="" />
+  </div>
+</div>
