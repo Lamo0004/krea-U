@@ -14,9 +14,9 @@ const {heading, textbody1, textbody2, felt, besked, mx, knap} = Astro.props;
         <input type="hidden" name="access_key" value="4c6a056b-13e6-4ac8-9054-ce047f239748">
         <!-- Fuld navn felt -->
         <div class="grid mb-6">
-            <label for="full-name" class="pb-space-050"><TextBody size="l-regular">Dit fulde navn</TextBody></label>
+            <label for="full-name" class="pb-space-050"><TextBody size="l-regular">Dit fulde navn *</TextBody></label>
                 <input
-                    class="border-1 border-accent-600 p-space-050 placeholder:text-grey-scale-400 "
+                    class="border-1 border-accent-600 p-space-050 placeholder:text-grey-scale-400"
                     placeholder="Peter Jensen"
                     id="full-name"
                     name="fname"
@@ -27,7 +27,7 @@ const {heading, textbody1, textbody2, felt, besked, mx, knap} = Astro.props;
 
         <!-- Email felt -->
         <div class="grid mb-6">
-            <label for="email" class="pb-space-050"><TextBody size="l-regular">E-mail</TextBody></label>
+            <label for="email" class="pb-space-050"><TextBody size="l-regular">E-mail *</TextBody></label>
                 <input
                     class="border-1 border-accent-600 p-space-050 placeholder:text-grey-scale-400"
                     placeholder="peter@mail.dk"
@@ -40,7 +40,7 @@ const {heading, textbody1, textbody2, felt, besked, mx, knap} = Astro.props;
 
         <!-- Telefonnummer felt -->
         <div class="grid mb-6">
-            <label for="telephone" class="pb-space-050"><TextBody size="l-regular">Telefonnummer</TextBody></label>
+            <label for="telephone" class="pb-space-050"><TextBody size="l-regular">Telefonnummer *</TextBody></label>
                 <input
                     class="border-1 border-accent-600 p-space-050 placeholder:text-grey-scale-400"
                     id="telephone"
@@ -53,7 +53,7 @@ const {heading, textbody1, textbody2, felt, besked, mx, knap} = Astro.props;
 
         <!-- Besked felt -->
         <div class="grid mb-6">
-            <label for="bestilling" class="pb-space-050"><TextBody size="l-regular">{felt}</TextBody></label>
+            <label for="bestilling" class="pb-space-050"><TextBody size="l-regular">{felt} *</TextBody></label>
                 <textarea
                     id="bestilling"
                     name="bestilling"
