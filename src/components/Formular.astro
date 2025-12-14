@@ -16,7 +16,7 @@ const {heading, textbody1, textbody2, felt, besked, mx, knap} = Astro.props;
         <div class="grid mb-6">
             <label for="full-name" class="pb-space-050"><TextBody size="l-regular">Dit fulde navn *</TextBody></label>
                 <input
-                    class="border-1 border-accent-600 p-space-050 placeholder:text-grey-scale-400"
+                    class="border-1 border-accent-600 p-space-050 text-grey-scale-950 placeholder:text-grey-scale-400"
                     placeholder="Peter Jensen"
                     id="full-name"
                     name="fname"
@@ -29,7 +29,7 @@ const {heading, textbody1, textbody2, felt, besked, mx, knap} = Astro.props;
         <div class="grid mb-6">
             <label for="email" class="pb-space-050"><TextBody size="l-regular">E-mail *</TextBody></label>
                 <input
-                    class="border-1 border-accent-600 p-space-050 placeholder:text-grey-scale-400"
+                    class="border-1 border-accent-600 p-space-050 text-grey-scale-950 placeholder:text-grey-scale-400"
                     placeholder="peter@mail.dk"
                     id="email"
                     name="email"
@@ -42,7 +42,7 @@ const {heading, textbody1, textbody2, felt, besked, mx, knap} = Astro.props;
         <div class="grid mb-6">
             <label for="telephone" class="pb-space-050"><TextBody size="l-regular">Telefonnummer *</TextBody></label>
                 <input
-                    class="border-1 border-accent-600 p-space-050 placeholder:text-grey-scale-400"
+                    class="border-1 border-accent-600 p-space-050 text-grey-scale-950 placeholder:text-grey-scale-400"
                     id="telephone"
                     name="telephone"
                     type="tel"
@@ -58,7 +58,7 @@ const {heading, textbody1, textbody2, felt, besked, mx, knap} = Astro.props;
                     id="bestilling"
                     name="bestilling"
                     placeholder={besked}
-                    class="border-1 border-accent-600 p-space-050 resize-none h-32 placeholder:text-grey-scale-400"
+                    class="border-1 border-accent-600 p-space-050 resize-none h-32 text-grey-scale-950 placeholder:text-grey-scale-400"
                     required
                 ></textarea>
         </div>
@@ -66,7 +66,7 @@ const {heading, textbody1, textbody2, felt, besked, mx, knap} = Astro.props;
         <div class="mb-6">
             <div class="flex flex-col gap-2 mt-2">
                 <label class="flex items-center gap-2">
-                <input type="checkbox" checked="checked" class="checkbox border-accent-600 after:text-grey-scale-950" required/><TextBody size="l-regular">Jeg stoler på at i behandler mine data indefor GDPR Logivning</TextBody></label>
+                <input type="checkbox" checked="checked" class="checkbox border-accent-600" required/><TextBody size="l-regular">Jeg stoler på at i behandler mine data indefor GDPR Logivning</TextBody></label>
             </div>
         </div>
 
