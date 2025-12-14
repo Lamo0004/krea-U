@@ -2,7 +2,7 @@
 import Button from "./Button.astro";
 import TextHeading from "./TextHeading.astro";
 import TextBody from "./TextBody.astro";
-const {heading, textbody1, textbody2, felt, besked, mx} = Astro.props;
+const {heading, textbody1, textbody2, felt, besked, mx, knap} = Astro.props;
 ---
 <div class={`pb-space-1000 lg:pb-space-1800 ${mx}`}>
 
@@ -70,6 +70,6 @@ const {heading, textbody1, textbody2, felt, besked, mx} = Astro.props;
         </div>
 
         <!-- Bekræft knap -->
-        <Button class="pb-space-200">Bestil nu</Button>
+        <Button class="pb-space-200" type="submit" required>{knap}</Button>
     </form>
 </div>
