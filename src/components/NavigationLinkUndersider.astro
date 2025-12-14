@@ -1,8 +1,12 @@
 ---
 const { href = "#", target = "_self" } = Astro.props;
 
-const currentUrl = Astro.url.pathname;
-const isActive = href === currentUrl;
+// Funktion til at fjerne trailing slash
+const normalize = (url) => url.replace(/\/$/, "");
+const currentUrl = normalize(Astro.url.pathname);
+const normalizedHref = normalize(href);
+
+const isActive = normalizedHref === currentUrl;
 
 const linkClasses = `
 font-raleway text-body-m text-grey-scale-950
