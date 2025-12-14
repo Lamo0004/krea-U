@@ -6,7 +6,7 @@ import HeroNiveau2 from "../components/HeroNiveau2.astro";
 import TextHeading from "../components/TextHeading.astro";
 import TextBody from "../components/TextBody.astro";
 import MenukortSektion from "../components/MenukortSektion.astro";
-import Pris_Card from "../components/Pris_Card.astro";
+import PrisCard from "../components/PrisCard.astro";
 import EventCard from "../components/EventCard.astro";
 
 const produkter_keramik = await fetch ("https://aeslhyivpbmaoavnrodx.supabase.co/rest/v1/keramik", {
@@ -65,7 +65,7 @@ const produkter_events = await fetch ("https://aeslhyivpbmaoavnrodx.supabase.co/
 
               <ul class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
                 {produkter_keramik.map((produkt) => (  // Dataen 'produkt' sendes med til Card
-                <Pris_Card produkt={produkt}></Pris_Card>
+                <PrisCard produkt={produkt}></PrisCard>
                 ))}
               </ul>
             </div>
@@ -89,12 +89,12 @@ const produkter_events = await fetch ("https://aeslhyivpbmaoavnrodx.supabase.co/
 
                  <ul class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 pb-space-1200">
                   {produkter_smykker.slice(0, 6).map((produkt) => (  // Dataen 'produkt' sendes med til Card
-                  <Pris_Card produkt={produkt}></Pris_Card>
+                  <PrisCard produkt={produkt}></PrisCard>
                   ))}
                 </ul>
                 <ul class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
                   {produkter_smykker.slice(6, 9).map((produkt) => (  // Dataen 'produkt' sendes med til Card
-                  <Pris_Card produkt={produkt}></Pris_Card>
+                  <PrisCard produkt={produkt}></PrisCard>
                   ))}
                 </ul>
                 
