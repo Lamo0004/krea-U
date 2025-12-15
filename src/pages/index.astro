@@ -31,7 +31,7 @@ import MenukortSektion from "../components/MenukortSektion.astro";
 		</div>
 	</FullBleedSection>
 
-	<div id="studios" class="fadein">
+	<div id="studios">
 	<StudiosSection></StudiosSection>
 	</div>
 
@@ -71,31 +71,3 @@ import MenukortSektion from "../components/MenukortSektion.astro";
 	</div>
 
 </MainLayout>
-
-
-<script is:inline>
-  document.addEventListener("DOMContentLoaded", () => {
-    const els = document.querySelectorAll(".fadein");
-
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-
-          const el = entry.target;
-          el.classList.add("animate__animated", "animate__fadeIn");
-          el.style.opacity = "1";
-
-          io.unobserve(el); // kør kun én gang
-        });
-      },
-      { root: null, threshold: 0.15, rootMargin: "0px 0px -100px 0px" }
-    );
-
-    els.forEach((el) => {
-      // start skjult (så det ikke “popper”)
-      el.style.opacity = "0";
-      io.observe(el);
-    });
-  });
-</script>
