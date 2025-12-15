@@ -41,7 +41,10 @@ import NavigationLinkUndersider from "./NavigationLinkUndersider.astro";
   </nav>
 
 <!-- Knap -->
-  <Button href="https://book.easytable.com/book/?id=35dca" target="_blank">Book bord</Button>
+  <Button href="https://book.easytable.com/book/?id=35dca" target="_blank">
+    <span class="block md:hidden">Book</span>
+    <span class="hidden md:block">Book bord</span>
+  </Button>
 
   <!-- Logo på mobil -->
   <a href="/" class="xl:hidden">
