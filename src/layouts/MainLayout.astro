@@ -54,7 +54,7 @@ const { title } = Astro.props;
           form.addEventListener("submit", (e) => {
             e.preventDefault();
 
-            if (input.value === "Krea-U EK 2025") {
+            if (input.value === "KreaU-EK2025") {
               document.getElementById("login-overlay")?.remove();
               localStorage.setItem("iform-totally-logged-in", "true");
             }
@@ -147,7 +147,7 @@ const { title } = Astro.props;
             <div id="login-modal">
               <div class="container">
                 <h1>Login</h1>
-                <p>Dette er et afsluttende eksamensprojekt på Erhvervsakademiet København. Password er: Krea-U EK 2025</p>
+                <p>Dette er et afsluttende eksamensprojekt på Erhvervsakademiet København. Password er: KreaU-EK2025</p>
                <form>
   				<input type="password" name="pass" placeholder="Password" />
   					<button type="submit">
