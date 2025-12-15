@@ -18,7 +18,7 @@ const produkter_keramik = await fetch ("https://aeslhyivpbmaoavnrodx.supabase.co
 } 
 ).then((res) => res.json()); 
 
-const produkter_smykker = await fetch ("https://aeslhyivpbmaoavnrodx.supabase.co/rest/v1/smykker", {
+const produkter_smykker = await fetch ( "https://aeslhyivpbmaoavnrodx.supabase.co/rest/v1/smykker?order=id.asc", {
   method: "GET",
   headers: {
     apikey:
