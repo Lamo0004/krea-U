@@ -26,8 +26,8 @@ import NavigationLinkUndersider from "./NavigationLinkUndersider.astro";
 
  <div class="fixed left-0 right-0 top-[98px] bg-primary-300 invisible group-hover:visible transition-all duration-200 z-40 py-space-400">
     <div class="flex flex-col">
-    <NavigationLinkUndersider href="/keramikverksted">Keramikværkstedet</NavigationLinkUndersider>
-    <NavigationLinkUndersider href="/smykkeverksted">Smykkeværkstedet</NavigationLinkUndersider>
+    <NavigationLinkUndersider href="/keramikverksted">Keramikværksted</NavigationLinkUndersider>
+    <NavigationLinkUndersider href="/smykkeverksted">Smykkeværksted</NavigationLinkUndersider>
     <NavigationLinkUndersider href="/events">Events</NavigationLinkUndersider>
     </div>
   </div>
@@ -41,7 +41,9 @@ import NavigationLinkUndersider from "./NavigationLinkUndersider.astro";
   </nav>
 
 <!-- Knap -->
+ <div class="hidden lg:block">
   <Button href="https://book.easytable.com/book/?id=35dca" target="_blank">Book bord</Button>
+  </div>
 
   <!-- Logo på mobil -->
   <a href="/" class="xl:hidden">
@@ -50,7 +52,7 @@ import NavigationLinkUndersider from "./NavigationLinkUndersider.astro";
 
 <!-- Burger-ikon -->
   <button id="burger" class="xl:hidden relative z-50 w-[140px] h-[40px] md:w-[180px] md:h-[50px]">
-    <div class="flex flex-col justify-self-end">
+    <div class="flex flex-col pl-space-1400 pt-space-300">
     <span class="block w-6 h-0.5 bg-grey-scale-950 mb-1 transition-transform duration-300"></span>
     <span class="block w-6 h-0.5 bg-grey-scale-950 mb-1 transition-opacity duration-300"></span>
     <span class="block w-6 h-0.5 bg-grey-scale-950 transition-transform duration-300"></span>
@@ -71,15 +73,16 @@ import NavigationLinkUndersider from "./NavigationLinkUndersider.astro";
   </summary>
 
   <div class="flex flex-col items-center">
-    <a href="/keramikverksted" class="py-3 font-raleway text-body-l text-grey-scale-600">Keramikværkstedet</a>
-    <a href="/smykkeverksted" class="py-3 font-raleway text-body-l text-grey-scale-600">Smykkeværkstedet</a>
-    <a href="/events" class="py-3 font-raleway text-body-l text-grey-scale-600">Events</a>
+    <a href="/keramikverksted" class="pt-6 font-raleway text-body-l text-grey-scale-600">Keramikværkstedet</a>
+    <a href="/smykkeverksted" class="pt-6 font-raleway text-body-l text-grey-scale-600">Smykkeværkstedet</a>
+    <a href="/events" class="pt-6 font-raleway text-body-l text-grey-scale-600">Events</a>
   </div>
 </details>
   <a href="/hjemme_krea" class="font-raleway text-body-xl text-grey-scale-950">Hjemme-krea</a>
   <a href="/priser" class="font-raleway text-body-xl text-grey-scale-950">Priser</a>
   <a href="/praktisk" class="font-raleway text-body-xl text-grey-scale-950">Praktisk</a>
   <a href="/gavekort" class="font-raleway text-body-xl text-grey-scale-950">Gavekort</a>
+  <Button href="https://book.easytable.com/book/?id=35dca" target="_blank">Book bord</Button>
 </nav>
 
 <script>

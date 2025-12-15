@@ -33,7 +33,148 @@ const { title } = Astro.props;
 		<footer>
 			<Footer></Footer>
 		</footer>
-			
+	
+		<!-- LOGIN SCRIPT -->
+    <script>
+      class Login extends HTMLElement {
+        constructor() {
+          super();
+          this.attachShadow({ mode: "open" });
+        }
+
+        connectedCallback() {
+          this.render();
+          this.attachEvents();
+        }
+
+        attachEvents() {
+          const form = this.shadowRoot.querySelector("form");
+          const input = this.shadowRoot.querySelector("input[name=pass]");
+
+          form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            if (input.value === "KreaU-EK2025") {
+              document.getElementById("login-overlay")?.remove();
+              localStorage.setItem("iform-totally-logged-in", "true");
+            }
+          });
+        }
+
+        render() {
+          this.shadowRoot.innerHTML = `
+            <style>
+              #login-modal {
+                position: fixed;
+                inset: 0;
+                background: var(--color-primary-500);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 9999;
+              }
+              .container {
+                background: var(--color-primary-200);
+                padding: 50px;
+                width: 350px;
+                text-align: center;
+				color: #000101;
+              }
+
+              input {
+                width: 100%;
+                margin-top: 10px;
+                padding: 10px;
+			  	background-color: transparent;
+				border-width: 0.5px;
+				border-color: var(--color-accent-600);
+				text-color: var(--color-primary-950);
+				}
+
+				input::placeholder {
+					font-family: montserrat;
+					color: var(--color-grey-scale-400);
+					font-size: var(--text-body-m);
+				}
+
+			  h1, button {
+			 	text-transform: uppercase; 
+				font-family: raleway;
+        background-color: transparent;
+			  }
+
+			  p {
+			  	font-family: montserrat;
+				font-size: var(--text-body-l);
+			  }
+
+			button {
+  				position: relative;
+  				width: 180px;
+  				height: 50px;
+  				cursor: pointer;
+  				overflow: hidden;
+  				margin-top: var(--margin-spacing-500);
+  				font-size: var(--text-body-l);
+          box-shadow: none;
+          border: none;
+          outline: none;
+			}
+
+			button:hover {
+ 				color: var(--color-grey-scale-950);}
+
+			button svg {
+  				position: absolute;
+  				top: 0;
+  				left: 0;
+  				width: 100%;
+  				height: 100%;
+  				fill: var(--color-accent-600);
+			}
+
+			button:hover svg {
+  				fill: var(--color-accent-400); 
+			}
+
+			button span {
+  				position: relative;
+  				z-index: 10; 
+			}
+
+            </style>
+
+            <div id="login-modal">
+              <div class="container">
+                <h1>Login</h1>
+                <p>Dette er et afsluttende eksamensprojekt på Erhvervsakademiet København. Password er: KreaU-EK2025</p>
+               <form>
+  				<input type="password" name="pass" placeholder="Password" />
+  					<button type="submit">
+					<svg viewBox="0 0 1118 298">
+					<path d="M1110.65 98.6012C1104.74 87.5321 1085.03 60.168 1071.95 49.3545C1036.01 19.6403 1005.36 19.541 955.277 14.585C941.096 13.1792 882.459 11.5462 870.269 9.74273C817.527 1.93966 629.051 5.91575 552.787 1.08054C493.404 -2.68964 355.194 4.41051 319.618 7.03757C210.093 15.1318 102.794 1.50655 56.4831 21.813C-42.7305 65.3157 20.5343 89.939 13.0834 133.527C12.9465 134.343 11.7275 135.224 11.7524 136.438C10.8443 138.568 4.68702 174.09 7.58531 175.297C17.5241 179.458 26.8285 252.98 39.2177 259.015C77.2936 277.582 98.2657 286.251 177.254 286.919C211.299 287.21 288.545 278.441 377.124 281.991C399.016 282.872 748.826 292.741 784.601 292.741C840.987 292.734 1004.05 310.015 1053.93 281.963C1057.03 280.344 1074.29 268.196 1078.81 262.373C1105.07 228.534 1079.9 237.48 1101.11 191.365C1104.87 183.192 1130.27 135.43 1110.63 98.5941L1110.65 98.6012Z" />
+					</svg>
+    				<span>Login</span>
+  					</button>
+				</form>
+              </div>
+            </div>
+          `;
+        }
+      }
+
+      customElements.define("iform-login", Login);
+
+      window.addEventListener("DOMContentLoaded", () => {
+        if (!localStorage.getItem("iform-totally-logged-in")) {
+          const overlay = document.createElement("div");
+          overlay.id = "login-overlay";
+          overlay.innerHTML = "<iform-login></iform-login>";
+          document.body.prepend(overlay);
+        }
+      });
+    </script>
+
 	</body>
 </html>
 
