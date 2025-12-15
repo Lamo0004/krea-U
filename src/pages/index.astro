@@ -36,7 +36,7 @@ import MenukortSektion from "../components/MenukortSektion.astro";
 	</div>
 
 	<FullBleedSection>
-		<div class="fadein1">
+		<div class="fadein">
 			<PictureLeft_Btn
 				image="../forside.webp"
 				alt="pige der maler"
@@ -48,7 +48,7 @@ import MenukortSektion from "../components/MenukortSektion.astro";
 		</div>
 	</FullBleedSection>
 
-	<div class="fadein2">
+	<div class="fadein">
 		<StepByStep
 			heading1="Sådan gør du"
 			image1="../step1_1.svg"
@@ -66,37 +66,36 @@ import MenukortSektion from "../components/MenukortSektion.astro";
 	</div>
 
 
-	<div class="fadein3">
+	<div class="fadein">
 		<MenukortSektion></MenukortSektion>
 	</div>
 
 </MainLayout>
 
 
-<script type="module">
-  import { inView } from "motion";
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const els = document.querySelectorAll(".fadein");
 
-  const textFadeIn = document.querySelector(".fadein");
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
 
-  inView(textFadeIn, () => {
-    textFadeIn.classList.add("animate__animated", "animate__fadeIn");
+          const el = entry.target;
+          el.classList.add("animate__animated", "animate__fadeIn");
+          el.style.opacity = "1";
+
+          io.unobserve(el); // kør kun én gang
+        });
+      },
+      { root: null, threshold: 0.15, rootMargin: "0px 0px -100px 0px" }
+    );
+
+    els.forEach((el) => {
+      // start skjult (så det ikke “popper”)
+      el.style.opacity = "0";
+      io.observe(el);
+    });
   });
-
-  const FadeIn = document.querySelector(".fadein1");
-
-  inView(FadeIn, () => {
-    FadeIn.classList.add("animate__animated", "animate__fadeIn");
-  });
-
-  const FadeIn2 = document.querySelector(".fadein2");
-
-inView(FadeIn2, () => {
-  FadeIn2.classList.add("animate__animated", "animate__fadeIn");
-});
-
-const FadeIn3 = document.querySelector(".fadein3");
-
-inView(FadeIn3, () => {
-  FadeIn3.classList.add("animate__animated", "animate__fadeIn");
-});
 </script>
