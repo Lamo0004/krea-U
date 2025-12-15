@@ -9,7 +9,7 @@ import StepByStep from "../components/StepByStep.astro";
 import FullBleedSection from "../components/FullBleedSection.astro";
 import MenukortSektion from "../components/MenukortSektion.astro";
 ---
-<MainLayout title="Forside">
+<MainLayout title="Forside"> 
 	<FullBleedSection>
 		<div class="relative mb-spacing-1000 lg:mb-spacing-1800">
 			<video autoplay muted loop playsinline class="w-full object-cover object-center brightness-50 h-130 md:h-200"><source src="../hero.video.mp4" type="video/mp4" /></video>
@@ -31,37 +31,73 @@ import MenukortSektion from "../components/MenukortSektion.astro";
 		</div>
 	</FullBleedSection>
 
-	<div id="studios">
+	<div id="studios" class="fadein">
 	<StudiosSection></StudiosSection>
 	</div>
 
 	<FullBleedSection>
-	<PictureLeft_Btn
-		image="../forside.webp"
-		alt="pige der maler"
-		heading="Velkommen til dig"
-		textbody1="Hos KREA-U træder du ind i et kreativt værksted, hvor hverdagen kan lægges på pause. Her kan du fordybe dig i farver, former og nærvær – om du maler på keramik, designer smykker eller udforsker andre af vores kreative muligheder."
-		textbody2= "Hos os er der plads til både rolig fordybelse og hyggelige stunder – alle er velkomne, uanset erfaring. Vi hjælper gerne med idéer, farver og teknikker, så du trygt kan gå i gang og lade kreativiteten udfolde sig i dit eget tempo. Vi håber, du vil nyde vores rolige og kreative værksted – et frirum midt i Herning skabt til dig. Vi glæder os til at se dig."
-		href="/koncept"
-		button="Mød konceptet"/>
+		<div class="fadein1">
+			<PictureLeft_Btn
+				image="../forside.webp"
+				alt="pige der maler"
+				heading="Velkommen til dig"
+				textbody1="Hos KREA-U træder du ind i et kreativt værksted, hvor hverdagen kan lægges på pause. Her kan du fordybe dig i farver, former og nærvær – om du maler på keramik, designer smykker eller udforsker andre af vores kreative muligheder."
+				textbody2= "Hos os er der plads til både rolig fordybelse og hyggelige stunder – alle er velkomne, uanset erfaring. Vi hjælper gerne med idéer, farver og teknikker, så du trygt kan gå i gang og lade kreativiteten udfolde sig i dit eget tempo. Vi håber, du vil nyde vores rolige og kreative værksted – et frirum midt i Herning skabt til dig. Vi glæder os til at se dig."
+				href="/koncept"
+				button="Mød konceptet"/>
+		</div>
 	</FullBleedSection>
 
-	<StepByStep
-		heading1="Sådan gør du"
-		image1="../step1_1.svg"
-		first_step="Book"
-		textbody1="Book et bord og vælg, om du vil sidde i keramikværkstedet eller smykkeværkstedet."
-		image2="../step2_1.svg"
-		second_step="Vælg"
-		textbody2="Få en introduktion af en medarbejder og gå på opdagelse i keramik, perler, maling, pensler og redskaber. Vi hjælper gerne med idéer og tips."
-		image3="../step3_1.svg"
-		third_step="Krea"
-		textbody3="Sæt dig til rette, bestil noget fra caféen og fordyb dig i dit projekt. Vi står klar til at guide dig undervejs."
-		image4="../step4_1.svg"
-		fourth_step="Afhent"
-		textbody4="Smykker tager du med hjem med det samme. Keramik glaserer og brænder vi. Du kan hente det ca. 14 dage efter."/>
+	<div class="fadein2">
+		<StepByStep
+			heading1="Sådan gør du"
+			image1="../step1_1.svg"
+			first_step="Book"
+			textbody1="Book et bord og vælg, om du vil sidde i keramikværkstedet eller smykkeværkstedet."
+			image2="../step2_1.svg"
+			second_step="Vælg"
+			textbody2="Få en introduktion af en medarbejder og gå på opdagelse i keramik, perler, maling, pensler og redskaber. Vi hjælper gerne med idéer og tips."
+			image3="../step3_1.svg"
+			third_step="Krea"
+			textbody3="Sæt dig til rette, bestil noget fra caféen og fordyb dig i dit projekt. Vi står klar til at guide dig undervejs."
+			image4="../step4_1.svg"
+			fourth_step="Afhent"
+			textbody4="Smykker tager du med hjem med det samme. Keramik glaserer og brænder vi. Du kan hente det ca. 14 dage efter."/>
+	</div>
 
-	<MenukortSektion></MenukortSektion>
+
+	<div class="fadein3">
+		<MenukortSektion></MenukortSektion>
+	</div>
 
 </MainLayout>
 
+
+<script>
+  import { inView } from "motion";
+
+  const textFadeIn = document.querySelector(".fadein");
+
+  inView(textFadeIn, () => {
+    textFadeIn.classList.add("animate__animated", "animate__fadeIn");
+  });
+
+  const FadeIn = document.querySelector(".fadein1");
+
+  inView(FadeIn, () => {
+    FadeIn.classList.add("animate__animated", "animate__fadeIn");
+  });
+
+  const FadeIn2 = document.querySelector(".fadein2");
+
+inView(FadeIn2, () => {
+  FadeIn2.classList.add("animate__animated", "animate__fadeIn");
+});
+
+const FadeIn3 = document.querySelector(".fadein3");
+
+inView(FadeIn3, () => {
+  FadeIn3.classList.add("animate__animated", "animate__fadeIn");
+});
+
+</script>
