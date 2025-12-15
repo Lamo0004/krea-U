@@ -6,23 +6,29 @@ import PrisOverblik from "../components/PrisOverblik.astro";
 import FullBleedSection from "../components/FullBleedSection.astro";
 ---
 <MainLayout title="Vores værksteder">
-    <HeroNiveau2
-        image="../verksteder_hero.webp" 
-        alt="pige der står bag en disk" 
-        display="Vores værksteder" 
-        textbody="Hos os tilbyder vi forskellige kreative værksteder. Du kan male på keramik, lave smykker eller deltage i vores inspirerende events."
-        stylingclasses="mb-spacing-1000 lg:mb-spacing-1800"/>
-
+    <FullBleedSection>
+        <HeroNiveau2
+            image="../verksteder_hero.webp" 
+            alt="pige der står bag en disk" 
+            display="Vores værksteder" 
+            textbody="Hos os tilbyder vi forskellige kreative værksteder. Du kan male på keramik, lave smykker eller deltage i vores inspirerende events."
+            stylingclasses="mb-spacing-1000 lg:mb-spacing-1800"/>
+    </FullBleedSection>
+    
     <StudiosSection></StudiosSection> 
 
-    <PrisOverblik></PrisOverblik>
+	<div class="fadein">
+        <PrisOverblik></PrisOverblik>
+    </div>
 
     <FullBleedSection>
-    <section class="grid grid-cols-3 gap-5 pb-space-1000 lg:pb-space-1800">
-        <img src="../verksteder1.webp" alt="en skål der er blevet malet på" class="h-auto w-125 object-cover object-center justify-self-start">
-        <img src="../verksteder2.webp" alt="to piger der sidder og maler" class="h-auto w-125 object-cover object-center justify-self-center">
-        <img src="../verksteder3.webp" alt="perle udvalg og en opslagtavle med perler" class="h-auto w-125 object-cover object-center justify-self-end">
-    </section>
+	<div class="fadein">
+        <section class="grid grid-cols-3 gap-5 pb-space-1000 lg:pb-space-1800">
+            <img src="../verksteder1.webp" alt="en skål der er blevet malet på" class="h-auto w-125 object-cover object-center justify-self-start">
+            <img src="../verksteder2.webp" alt="to piger der sidder og maler" class="h-auto w-125 object-cover object-center justify-self-center">
+            <img src="../verksteder3.webp" alt="perle udvalg og en opslagtavle med perler" class="h-auto w-125 object-cover object-center justify-self-end">
+        </section>
+    </div>
     </FullBleedSection>
 
 </MainLayout>

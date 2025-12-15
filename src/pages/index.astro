@@ -31,12 +31,12 @@ import MenukortSektion from "../components/MenukortSektion.astro";
 		</div>
 	</FullBleedSection>
 
-	<div id="studios" class="fadein">
+	<div id="studios">
 	<StudiosSection></StudiosSection>
 	</div>
 
 	<FullBleedSection>
-		<div class="fadein1">
+		<div class="fadein">
 			<PictureLeft_Btn
 				image="../forside.webp"
 				alt="pige der maler"
@@ -48,7 +48,7 @@ import MenukortSektion from "../components/MenukortSektion.astro";
 		</div>
 	</FullBleedSection>
 
-	<div class="fadein2">
+	<div class="fadein">
 		<StepByStep
 			heading1="Sådan gør du"
 			image1="../step1_1.svg"
@@ -66,37 +66,8 @@ import MenukortSektion from "../components/MenukortSektion.astro";
 	</div>
 
 
-	<div class="fadein3">
+	<div class="fadein">
 		<MenukortSektion></MenukortSektion>
 	</div>
 
 </MainLayout>
-
-
-<script type="module">
-  import { inView } from "motion";
-
-  const textFadeIn = document.querySelector(".fadein");
-
-  inView(textFadeIn, () => {
-    textFadeIn.classList.add("animate__animated", "animate__fadeIn");
-  });
-
-  const FadeIn = document.querySelector(".fadein1");
-
-  inView(FadeIn, () => {
-    FadeIn.classList.add("animate__animated", "animate__fadeIn");
-  });
-
-  const FadeIn2 = document.querySelector(".fadein2");
-
-inView(FadeIn2, () => {
-  FadeIn2.classList.add("animate__animated", "animate__fadeIn");
-});
-
-const FadeIn3 = document.querySelector(".fadein3");
-
-inView(FadeIn3, () => {
-  FadeIn3.classList.add("animate__animated", "animate__fadeIn");
-});
-</script>

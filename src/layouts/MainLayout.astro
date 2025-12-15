@@ -12,6 +12,7 @@ const { title } = Astro.props;
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 		<meta name="generator" content={Astro.generator} />
 		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -19,6 +20,7 @@ const { title } = Astro.props;
 		<link rel="manifest" href="favicon/site.webmanifest">
 		<title>{Astro.props.title}</title>
 		<script defer src="https://unpkg.com/tailwindcss-intersect@2.x.x/dist/observer.min.js"></script>
+		
 	</head>
 	<body class="bg-primary-200 overflow-x-hidden">
 
@@ -171,3 +173,30 @@ const { title } = Astro.props;
 
 	</body>
 </html>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const els = document.querySelectorAll(".fadein");
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          const el = entry.target;
+          el.classList.add("animate__animated", "animate__fadeIn");
+          el.style.opacity = "1";
+
+          io.unobserve(el); // kør kun én gang
+        });
+      },
+      { root: null, threshold: 0.15, rootMargin: "0px 0px -100px 0px" }
+    );
+
+    els.forEach((el) => {
+      // start skjult (så det ikke “popper”)
+      el.style.opacity = "0";
+      io.observe(el);
+    });
+  });
+</script>
