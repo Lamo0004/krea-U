@@ -4,23 +4,16 @@ import TextHeading from "./TextHeading.astro";
 const { produkt } = Astro.props; // Samler property med dataen op
 ---
 <div>
-<img
-  src={`../${produkt.image}`}
-  alt={produkt.name}
-  class="pb-space-100 hover:cursor-pointer"
-  loading="lazy"
-  onclick={`const modal=document.getElementById('${produkt.id}'); modal.querySelector('img').src='../${produkt.image}'; modal.showModal()`}
-/>
-
-<dialog id={produkt.id} class="modal">
-  <div class="modal-box bg-primary-500">
-    <img data-src="" alt={produkt.name} class="pb-space-100">
-  </div>
-  <form method="dialog" class="modal-backdrop">
-    <button>close</button>
-  </form>
-</dialog>
-
+    <img src={`../${produkt.image}`} alt={produkt.name} class="pb-space-100 hover:cursor-pointer" loading="lazy" onclick={`const modal=document.getElementById('${produkt.id}'); modal.querySelector('img').src='../${produkt.image}'; modal.showModal()`}>
+    <dialog id={produkt.id} class="modal">
+        <div class="modal-box bg-primary-500" >
+            <img data-src="" alt={produkt.name} class="pb-space-100">
+        </div>
+        <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+        </form>
+    </dialog>
     <TextHeading size="xs" stylingclasses="pb-space-050">{produkt.name}</TextHeading>    
     <TextBody size="l-regular">{produkt.price}</TextBody>
 </div>
+
