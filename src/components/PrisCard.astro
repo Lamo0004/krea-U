@@ -4,7 +4,7 @@ import TextHeading from "./TextHeading.astro";
 const { produkt } = Astro.props; // Samler property med dataen op
 ---
 <div>
-    <img src={`../${produkt.image}`} alt={produkt.name} class="pb-space-100 hover:cursor-pointer" loading="lazy" onclick={`const modal=document.getElementById('${produkt.id}'); modal.querySelector('img').src='../${produkt.image}'; modal.showModal()`}>
+    <img src={`../${produkt.image}`} alt={produkt.name} class="pb-space-100 hover:cursor-pointer" loading="lazy" onclick={`const modal=document.getElementById('${produkt.id}'); modal.querySelector('img').src='../${produkt.image}'; modal.showModal()`}> <!--   Når brugeren klikker: 1. Find modal-elementet med det aktuelle produkt ID 2. Sæt src på modalens <img>, så billedet hentes nu 3. Åbn modalet med showModal() -->
     <dialog id={produkt.id} class="modal">
         <div class="modal-box bg-primary-500" >
             <img data-src="" alt={produkt.name} class="pb-space-100">
