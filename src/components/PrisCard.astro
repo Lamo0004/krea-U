@@ -7,7 +7,14 @@ const { produkt } = Astro.props; // Samler property med dataen op
     <img src={`../${produkt.image}`} alt={produkt.name} class="pb-space-100 hover:cursor-pointer" onclick={`document.getElementById('${produkt.id}').showModal()`} loading="lazy">
     <dialog id={produkt.id} class="modal">
         <div class="modal-box bg-primary-500" >
-            <img src={`../${produkt.image}`} alt={produkt.name} class="pb-space-100">
+            <img src={`../${produkt.image}`} alt={produkt.name} class="pb-space-100 display:none";>
+            <script>
+  const img = document.getElementById('modal-img-${produkt.id}');
+  document.getElementById('${produkt.id}').addEventListener('show', () => {
+    img.src = '../${produkt.image}';
+    img.style.display = 'block';
+  });
+</script>
         </div>
         <form method="dialog" class="modal-backdrop">
         <button>close</button>
